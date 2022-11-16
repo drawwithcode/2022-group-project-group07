@@ -1,4 +1,5 @@
 //ciao
+//ciao2
 function preload() {
 	// put preload code here
 }
@@ -8,8 +9,8 @@ function setup() {
 	// put setup code here
 	const message = "This is a template reposotory\nfor the course elective Creative Coding\nCommunication Design, Politecnico di Milano";
 	textAlign(CENTER, CENTER);
-  textSize(16)
-	text(message, width/2, height/2);
+	textSize(16)
+	text(message, width / 2, height / 2);
 }
 
 function draw() {
