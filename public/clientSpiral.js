@@ -11,9 +11,8 @@ let colors = [
   "lime",
   "fucsia",
 ];
-let myColor;
+let colornum;
 let newColor;
-let myflag = 1;
 let myrandom_flag;
 
 let valid_usernum = 0;
@@ -46,25 +45,20 @@ let clientSocket = io();
 // define the function that will be called on a new newConnection
 clientSocket.on("connect", newConnection);
 
-clientSocket.on("newclientcolor", newClientColor);
-
 clientSocket.on("sendUserId", receiveUserId);
 
 function receiveUserId(userdata) {
-  myColor = userdata.usernum;
-  //console.log("User Number : ",userdata.usernum," Socket : ", userdata.userskt, " Color : ",colors[myColor]);
+  colornum = userdata.usernum;
   if (userdata.usernum < 6) {
     let connection_parameter = {
       id: clientSocket.id,
-      flag: myflag,
       random_flag: myrandom_flag,
-      color: myColor,
+      color: colornum,
     };
-    console.log("colore: ", userdata.usernum);
     valid_usernum = 1;
     clientSocket.emit("client", connection_parameter);
   } else {
-    myColor = 999;
+    colornum = 999;
   }
 }
 
@@ -73,25 +67,6 @@ function newConnection() {
   myrandom_flag = random(1.2, 3);
 }
 
-// Define which function should be called when a new message
-// comes from the server with type "mouseBroadcast"
-clientSocket.on("mouseBroadcast", otherMouse);
-
-// Callback function called when a new message comes from the server
-// Data parameters will contain the received data
-function otherMouse(dataReceived) {
-  fill(dataReceived.color);
-  noStroke();
-  circle(dataReceived.x, dataReceived.y, 20);
-}
-
-function newClientColor(dataReceived) {
-  newColor = dataReceived.clientcolor;
-}
-
-// function preload() {
-//   logotype = loadFont("/Users/clara/Downloads/linee colorate 3/public/html pages/ArmoukRegular.otf");
-// }
 
 // create the artboard
 function setup() {
@@ -103,8 +78,6 @@ function setup() {
   video = createCapture(VIDEO);
   video.size(video.width / 20, video.height / 16);
   video.hide();
-
-  //myColor = color(random(255), random(255), random(255));
   
   noStroke();
   textAlign(CENTER);
@@ -149,16 +122,14 @@ function setup() {
 // draw
 function draw() {
 
-  if (myColor === 999) {
+  if (colornum === 999) {
     fill("black");
     textSize(100);
     text("Connection Exceeded !!", windowWidth / 2 - 100, windowHeight / 2);
   }
-  if (myColor != 999 && valid_usernum !=  0) {
-  console.log("colore: ", colors[myColor]); 
-  fill(colors[myColor]);
+  if (colornum != 999 && valid_usernum !=  0) {
+  fill(colors[colornum]);
   
-
   translate(width / 2, height / 2);
 
   //mermaid is the variable that allows to see the client spiral
@@ -321,30 +292,6 @@ function returnSpiral() {
   information = false;
   button2.hide();
   esc.hide();
-}
-
-// when the mouse is moved, draw it and send a message to the server
-function mouseDragged() {
-  //fill(newColor);
-  if (myColor != 999) {
-    fill(colors[myColor]);
-    noStroke();
-    circle(mouseX, mouseY, 10);
-  }
-
-  // create an object containing the mouse position
-  let message = {
-    id: clientSocket.id,
-    // x: mouseX,
-    // y: mouseY,
-    color: myColor,
-    flag: myflag,
-    random_flag: myrandom_flag,
-  };
-
-  // send the object to server,
-  // tag it as "mouse" event
-  clientSocket.emit("mouse", message);
 }
 
 navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
