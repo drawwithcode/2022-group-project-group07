@@ -101,6 +101,3 @@ function newServerConnection(newSocket) {
   io.to(newSocket.id).emit("sendUserId", userinfo);
 }
 }
-
-
-
