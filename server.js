@@ -1,8 +1,6 @@
-let colors = ["white", "red", "green", "violet", "orange", "pink", "azure", "yellow", "purple", "lime", "fucsia"];
 let users = [0, 0, 0, 0, 0, 0];
 let number_connection = 0;
-let uindex;
-
+let user_index;
 total_connections = 1;
 
 // load express
@@ -55,37 +53,28 @@ function newServerConnection(newSocket) {
       i=6;
     }
   }
-
   
   users.find((value, index) => {
     console.log("User # ", index, " with value ", value);
   });
 
-  //console.log(users[0]);
-
   // tell to all the others that a new user connected
-  newSocket.on("mouse", incomingMouseMessage);
-
   newSocket.on("client", incomingNewClient);
-
-  newSocket.on("client-color", NewClientColor);
 
   newSocket.on("disconnect", function (){
 
     let dclient = {
       cls : newSocket.id,
-      uid : uindex,
+      uid : user_index,
     }
 
     users.find((value, index) => {
       //console.log("Visited index ", index, " with value ", value);
       if (value == dclient.cls) {
          dclient.uid = index;
-        //console.log("Record da disconnettere : " , dclient.uid); 
         console.log("Disconnecting User : ", dclient.uid, "  Client ID : ", users[dclient.uid]); 
       }
     });
-
     
     io.to(users[0]).emit("endclient", dclient);
       console.log("User disconnected : ", newSocket.id);
@@ -96,15 +85,7 @@ function newServerConnection(newSocket) {
 
     newSocket.on("audioMessage", function (msg) {
       io.to(users[0]).emit("audioMessage", msg);
-      //console.log("send audio to master: ", newSocket.id);
     });
-   
-
-  // callback function run when the "mouse" message is received
-  function incomingMouseMessage(dataReceived) {
-    // send it to individual socketid (private message)
-    io.to(users[0]).emit("mouseBroadcast", dataReceived);
-  }
 
   function incomingNewClient(dataReceived) {
     // send it to individual socketid (private message)
@@ -112,12 +93,6 @@ function newServerConnection(newSocket) {
     console.log("Color : ", dataReceived.color);
   }
 
-  function NewClientColor(dataReceived) {
-    // send it to individual socketid (private message)
-    io.to(users[dataReceived.clientid]).emit("newclientcolor", dataReceived);
-    console.log("Color : ", dataReceived.clientcolor);
-    console.log("   ");
-  }
 } else {
   let userinfo = {
     usernum : 999,
@@ -126,23 +101,6 @@ function newServerConnection(newSocket) {
   io.to(newSocket.id).emit("sendUserId", userinfo);
 }
 }
-
-
-// define which function should be called
-// when a new connection is opened from client
-
-/*io.on("connection", newConnection);
-
-// callback function: the paramenter (in this case socket)
-// will contain all the information on the new connection
-function newConnection(newSocket) {
-  // send audio
-  newSocket.on("audioMessage", function (msg) {
-    io.to(users[0]).emit("audioMessage", msg);
-  });
-}
-
-*/
 
 
 
