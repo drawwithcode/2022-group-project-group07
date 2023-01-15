@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+body { 
+  position: relative;
+}
+
+@font-face {
+  /* font di Mermaid */
+  font-family: 'ArmoukRegular';
+  src: url('./assets/ArmoukRegular.otf');
+}

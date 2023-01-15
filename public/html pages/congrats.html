@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mermaid</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* body {
+            background-color: rgb(0, 31, 53);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+    </style>
+</head>
+
+<body>
+    <!--titolo iniziale -->
+    <div class="col-12" class="titolo">
+        <p class="titolo1">MERMAID</p>
+    </div>
+
+    <div class="col-12" id="testo">
+        <div id="testo1">CONGRATULATIONS! YOU MANAGED TO AVOID THE MERMAID!</div>
+        <div id="testo2">You didn't accept something without reading it.
+            MERMAID would have stolen your personal data and used them at its pleasure.</div>
+    </div>
+
+
+    <div class="box">
+        <div class="read">Click to find out what you would have accepted!</div>
+    </div>
+    <!-- <input type="button" class="button" onclick="location.href='home.html';" value="home"> -->
+    <script src="confetti.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <input type="button" class="fadeButton" onclick="location.href='alert.html';" value="info">
+    <script>
+
+        const start = () => {
+            setTimeout(function () {
+                confetti.start()
+            }, 500); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        const stop = () => {
+            setTimeout(function () {
+                confetti.stop()
+            }, 4000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+
+        start();
+        stop();
+
+        $(window).on('load', function () {
+            $('.fadeButton').delay(3500).fadeIn()
+            $('.read').delay(3500).fadeIn()
+        })
+    </script>
+
+</body>
+
+</html>

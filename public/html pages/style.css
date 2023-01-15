@@ -1,0 +1,1253 @@
+/*Reset Stylesheet*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* Il codice inizia qui*/
+* {
+  box-sizing: border-box;
+
+  /* Include il border e il padding
+  nell'altezza e nella larghezza
+  totale di un elemento */
+}
+
+/* Versione mobile */
+[class*='col-'] {
+  width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  background-color: #000000;
+  /* background-color: rgb(0, 31, 53); */
+}
+
+@font-face {
+  /* font di Mermaid */
+  font-family: 'ArmoukRegular';
+  src: url('../assets/ArmoukRegular.otf');
+}
+
+/* Montserrat: ci sono tutti i pesi */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+/* HOMEPAGE */
+
+/* div che contiene il titolo Mermaid */
+.titolo {
+  height: 850px;
+  margin-right: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+
+/* scritta Mermaid */
+.titolo1 {
+  font-family: ArmoukRegular, serif;
+  color: rgb(21, 163, 255);
+  font-style: normal;
+  font-size: 6em;
+  display: block;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* quadrato che contiene il vortice */
+#square {
+  height: 300px;
+  width: 300px;
+  background-color: transparent;
+  border: 3px solid rgb(21, 163, 255);
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  margin: auto;
+  position: absolute;
+
+  /* colore di sfondo del vortice */
+  background: radial-gradient(rgb(0, 0, 0), rgb(21, 163, 255), rgb(0, 0, 0));
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+}
+
+/* div che contiene le due scritte ai lati */
+#welcome {
+  height: 200px;
+  width: 20px;
+  margin-right: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+
+/* scritta welcome to our website */
+#welcome1 {
+  font-family: ArmoukRegular, serif;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-size: 2.5em;
+  display: block;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 27%;
+  left: 0%;
+}
+
+/* pulsante "start" nella homepage */
+.button {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-size: 1.5em;
+  margin: auto;
+  width: 130px;
+  height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 89%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(21, 163, 255);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+/* da qui in poi: proprietà vortice all'interno del quadrato */
+.rings {
+  position: relative;
+  width: 400px;
+  animation-delay: 100ms;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.rings>.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+  transform-origin: center;
+  animation-duration: 4s;
+  animation-delay: calc(0.4s * var(--delay));
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  filter: opacity(0);
+  will-change: transform;
+  overflow: hidden;
+}
+
+.rings>.ring:nth-child(even) {
+  border-color: white;
+  box-shadow: 0 0 4px rgb(21, 163, 255), 0 0 20px rgb(21, 163, 255), inset 0 0 4px rgb(21, 163, 255),
+    inset 0 0 20px rgb(21, 163, 255);
+}
+
+.rings>.ring:nth-child(odd) {
+  border-color: white;
+  box-shadow: 0 0 4px rgb(29, 228, 142), 0 0 20px rgb(29, 228, 142), inset 0 0 4px rgb(29, 228, 142),
+    inset 0 0 20px rgb(29, 228, 142);
+}
+
+.rings>.ring:first-child {
+  width: 50px;
+  margin: -25px 0 0 -25px;
+}
+
+.rings>.ring:nth-child(2) {
+  width: 64px;
+  margin: -32px 0 0 -32px;
+}
+
+.rings>.ring:nth-child(3) {
+  width: 78px;
+  margin: -39px 0 0 -39px;
+}
+
+.rings>.ring:nth-child(4) {
+  width: 92px;
+  margin: -46px 0 0 -46px;
+}
+
+.rings>.ring:nth-child(5) {
+  width: 104px;
+  margin: -52px 0 0 -52px;
+}
+
+.rings>.ring:nth-child(6) {
+  width: 118px;
+  margin: -59px 0 0 -59px;
+}
+
+.anim-zoomIn {
+  animation-name: zoomIn;
+}
+
+.anim-pan {
+  animation-name: anim-pan;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: perspective(200px) translatez(0);
+    filter: opacity(0);
+  }
+
+  60% {
+    filter: opacity(100%);
+  }
+
+  100% {
+    transform: perspective(200px) translatez(200px);
+  }
+}
+
+@keyframes anim-pan {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-50%, -45%, 0);
+  }
+
+  75% {
+    transform: translate3d(45%, 35%, 0);
+  }
+
+  85% {
+    transform: translate3d(-60%, 25%, 0);
+  }
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ring {
+  aspect-ratio: 1/1;
+}
+
+/* SECONDA PAGINA (Accettazione dei TOS) */
+
+/* scritta bianca TOS */
+#tos {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-size: 1.2em;
+  margin: auto;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 9%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* rettangolo azzurro grande */
+#rect1 {
+  height: 480px;
+  width: 300px;
+  background-color: rgb(21, 163, 255);
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  margin: auto;
+  position: absolute;
+  -webkit-clip-path: polygon(7% 1%, 93% 1%, 100% 1%, 100% 93%, 93% 100%, 1% 100%, 1% 93%, 1% 7%);
+  clip-path: polygon(7% 1%, 93% 1%, 100% 1%, 100% 93%, 93% 100%, 1% 100%, 1% 93%, 1% 7%);
+}
+
+/* rett bianco dentro il rett azzurro grande */
+#rect2 {
+  height: 370px;
+  width: 260px;
+  background-color: white;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  margin: auto;
+  position: absolute;
+  -webkit-clip-path: polygon(10% -2%, 92% -2%, 100% -2%, 100% 92%, 92% 100%, -2% 100%, -2% 92%, -2% 10%);
+  clip-path: polygon(10% -2%, 80% -2%, 100% -2%, 100% 92%, 92% 100%, -2% 100%, -2% 92%, -2% 10%);
+}
+
+/* testo all'interno del rettangolo bianco */
+#testolungo {
+  height: 340px;
+  width: 240px;
+  font-weight: 400;
+  padding: 20px;
+  margin: 20px;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-style: normal;
+  font-size: 9pt;
+  margin: auto;
+  overflow-y: scroll;
+  line-height: normal;
+}
+
+/* classe che serve per mettere frasi in grassetto all'interno del testo */
+.bold {
+  display: block;
+  font-weight: 700;
+}
+
+/* scritta "I agree to the Terms of Service" */
+#agree {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: black;
+  font-style: normal;
+  font-size: 8pt;
+  margin: auto;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#button1 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.7em;
+  margin: auto;
+  width: 80px;
+  height: 23px;
+  position: absolute;
+  text-align: center;
+  top: 93%;
+  left: 10%;
+  background-color: transparent;
+  border: 1.5px solid white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+/* bottone "disagree" sulla sinistra */
+#button2 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.7em;
+  margin: auto;
+  width: 80px;
+  height: 23px;
+  position: absolute;
+  text-align: center;
+  top: 93%;
+  left: 16%;
+  background-color: transparent;
+  border: 1.5px solid white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+/* bottone "agree" sulla destra */
+#button3 {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-style: normal;
+  font-size: 0.7em;
+  font-weight: 700;
+  margin: auto;
+  width: 80px;
+  height: 23px;
+  position: absolute;
+  text-align: center;
+  top: 93%;
+  left: 51%;
+  border: none;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+#checkbox {
+  top: 87%;
+  left: 13%;
+  display: inline;
+  position: absolute;
+  height: 12px;
+  width: 12px;
+}
+
+input {
+  margin: 0.4rem;
+}
+
+/* PAGINA DISAGREE */
+
+/* rettangolo nero sopra alla pagina dei tos */
+#black {
+  height: 600px;
+  width: 300px;
+  background-color: black;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  margin: auto;
+  position: absolute;
+  opacity: 0.7;
+}
+
+/* rettangolo bianco che compare sopra (popup) */
+#popup {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  margin: auto;
+  position: absolute;
+  -webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 90%, 0% 10%);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 90%, 0% 10%);
+}
+
+#alert {
+  width: 47px;
+  height: auto;
+  top: 3.25%;
+  left: 38%;
+  display: block;
+  margin: auto;
+  position: absolute;
+}
+
+/* scritta in bold "Are you sure?" */
+#sure {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: 1.2em;
+  margin: auto;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* scritta sotto "Are you sure?" */
+#scritta {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  color: black;
+  font-size: 0.9em;
+  margin: auto;
+  width: 80%;
+  height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* bottone "Yes I disagree" sulla sinistra */
+#button4 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(21, 163, 255);
+  font-style: normal;
+  font-size: 0.7em;
+  margin: auto;
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  left: 10%;
+  background-color: transparent;
+  border: 1.5px solid rgb(21, 163, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+/* bottone "No" sulla destra */
+#button5 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-style: normal;
+  font-size: 0.7em;
+  font-weight: 800;
+  margin: auto;
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  left: 63%;
+  border: none;
+  background-color: rgb(21, 163, 255);
+  /* border: 1.5px solid white; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+/* PAGINA CONGRATULATIONS */
+/* div che contiene il testo */
+#testo {
+  height: 400px;
+  width: 300px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: inline-block;
+  line-height: normal;
+}
+
+#testoAlert {
+  height: 400px;
+  width: 300px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: inline-block;
+  line-height: normal;
+}
+
+/* testo sopra */
+#testo1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-size: 1.7em;
+  margin: auto;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  left: 0%;
+  line-height: normal;
+  animation: lights 5s 750ms linear infinite;
+}
+
+@keyframes lights {
+  0% {
+    color: hsl(0, 0%, 100%);
+    text-shadow:
+      0 0 1em rgba(21, 161, 255, 0.2),
+      0 0 0.125em rgba(29, 228, 142, 0.5),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+  30% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em rgba(21, 161, 255, 0.5),
+      0 0 0.125em rgba(29, 228, 142, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 50%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  40% {
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em rgba(21, 161, 255, 0.5),
+      0 0 0.125em rgba(0, 248, 140, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em rgba(21, 161, 255, 0.5),
+      0 0 0.125em rgba(29, 228, 142, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em rgba(21, 161, 255, 0.2),
+      0 0 0.125em rgba(29, 228, 142, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+}
+
+/* testo sotto */
+#testo2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-size: 1.28em;
+  margin: auto;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 0%;
+  line-height: normal;
+}
+
+/* testo sopra */
+#testo3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-size: 1.4em;
+  margin: auto;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  left: 0%;
+  line-height: 34px;
+  animation: lights 5s 750ms linear infinite;
+}
+
+/* testo sotto */
+#testo4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-size: 1.45em;
+  margin: auto;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  left: 0%;
+  line-height: normal;
+}
+
+.fadeButton {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-size: 1.5em;
+  margin: auto;
+  width: 130px;
+  height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 89%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(21, 163, 255);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  border-radius: 30px;
+}
+
+.box {
+  height: 40px;
+  width: 300px;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: inline-block;
+
+}
+
+.read {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: red;
+  font-style: normal;
+  font-size: 1em;
+  margin: auto;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  left: 0%;
+  line-height: normal;
+  display: none;
+}
+
+.alert-days:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 200%;
+  box-sizing: border-box;
+  z-index: -1;
+  left: -50%;
+  top: -50%;
+  border-radius: 107px;
+  background-color: rgba(238, 95, 90, 0.571);
+  -webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+
+@-webkit-keyframes pulse-ring {
+  0% {
+    -webkit-transform: scale(0.33);
+    transform: scale(0.33);
+  }
+
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    -webkit-transform: scale(0.33);
+    transform: scale(0.33);
+  }
+
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+#home {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-style: normal;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin: auto;
+  width: 90px;
+  height: 25px;
+  position: absolute;
+  text-align: center;
+  top: 90%;
+  left: 35%;
+  border: none;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+}
+
+@media screen and (min-height: 700px) {
+
+  /* rettangolo azzurro grande */
+  #rect1 {
+    height: 580px;
+    width: 300px;
+    background-color: rgb(21, 163, 255);
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    margin: auto;
+    position: absolute;
+    -webkit-clip-path: polygon(7% 1%, 93% 1%, 100% 1%, 100% 93%, 93% 100%, 1% 100%, 1% 93%, 1% 7%);
+    clip-path: polygon(7% 1%, 93% 1%, 100% 1%, 100% 93%, 93% 100%, 1% 100%, 1% 93%, 1% 7%);
+  }
+
+  /* rett bianco dentro il rett azzurro grande */
+  #rect2 {
+    height: 470px;
+    width: 260px;
+    background-color: white;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    margin: auto;
+    position: absolute;
+    -webkit-clip-path: polygon(10% -2%, 92% -2%, 100% -2%, 100% 92%, 92% 100%, -2% 100%, -2% 92%, -2% 10%);
+    clip-path: polygon(10% -2%, 80% -2%, 100% -2%, 100% 92%, 92% 100%, -2% 100%, -2% 92%, -2% 10%);
+  }
+
+  /* scritta bianca TOS */
+  #tos {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-size: 1.2em;
+    margin: auto;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* testo all'interno del rettangolo bianco */
+  #testolungo {
+    height: 450px;
+    width: 240px;
+    font-weight: 400;
+    padding: 20px;
+    padding-top: 20px;
+    margin: 20px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-style: normal;
+    font-size: 9pt;
+    margin: auto;
+    overflow-y: scroll;
+    line-height: normal;
+  }
+
+  #checkbox {
+    top: 88.3%;
+    left: 13%;
+    display: inline;
+    position: absolute;
+    height: 12px;
+    width: 12px;
+  }
+
+  /* scritta "I agree to the Terms of Service" */
+  #agree {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-style: normal;
+    font-size: 8pt;
+    margin: auto;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    top: 93.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* rettangolo nero sopra alla pagina dei tos */
+  #black {
+    height: 700px;
+    width: 300px;
+    background-color: black;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    margin: auto;
+    position: absolute;
+    opacity: 0.7;
+  }
+
+  /* div che contiene il testo */
+  #testo {
+    height: 400px;
+    width: 300px;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: inline-block;
+    line-height: normal;
+  }
+
+  /* testo sopra */
+  #testo3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-size: 1.5em;
+    margin: auto;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    top: 0%;
+    left: 0%;
+    line-height: 35px;
+  }
+
+  /* testo sotto */
+  #testo4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-size: 1.55em;
+    margin: auto;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    top: 46%;
+    left: 0%;
+    line-height: 30px;
+  }
+
+  #square {
+    height: 330px;
+    width: 330px;
+    background-color: transparent;
+    border: 3px solid rgb(21, 163, 255);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    margin: auto;
+    position: absolute;
+  }
+
+  /* testo sotto */
+  #testo2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-size: 1.28em;
+    margin: auto;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 0%;
+    line-height: normal;
+  }
+
+  .read {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: red;
+    font-style: normal;
+    font-size: 1.2em;
+    margin: auto;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    text-align: center;
+    top: 0%;
+    left: 0%;
+    display: none;
+    line-height: normal;
+  }
+
+  .box {
+    height: 40px;
+    width: 300px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: inline-block;
+  }
+
+  #welcome {
+    height: 200px;
+    width: 20px;
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  /* scritta welcome to our website */
+  #welcome1 {
+    font-family: ArmoukRegular, serif;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-size: 2.8em;
+    display: block;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 27%;
+    left: 0%;
+  }
+
+  .button {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-size: 1.7em;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    top: 89%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(21, 163, 255);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 30px;
+  }
+
+  #testoAlert {
+    height: 400px;
+    width: 300px;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: inline-block;
+    line-height: normal;
+  }
+
+  #home {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 600;
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    top: 92%;
+    left: 32%;
+    border: none;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 30px;
+  }
+}
