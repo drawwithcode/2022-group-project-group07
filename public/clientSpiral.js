@@ -57,7 +57,7 @@ function newConnection() {
 
 function preload() {
   //regular = loadFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-  myFont = loadFont('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  myFont = loadFont('https://fonts.cdnfonts.com/css/montserrat');
 }
 
 // create the artboard
