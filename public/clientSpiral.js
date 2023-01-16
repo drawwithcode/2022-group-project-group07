@@ -294,10 +294,18 @@ function returnSpiral() {
   esc.hide();
 }
 
+// The MediaDevices.getUserMedia() method 
+// prompts the user for permission to use a media input, in this case audio
 navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
-  const mediaRecorder = new MediaRecorder(stream);
-  mediaRecorder.start();
 
+  // If the user accepts, the promise is resolved with an audio stream
+  // that is passed into the MediaRecorder constructor
+  const mediaRecorder = new MediaRecorder(stream);
+
+  mediaRecorder.start(); // start recording audio
+
+  // Collect chunks of audio data in an array as the recording continues
+  // listening for "dataavailable" event trigger
   let audioChunks = [];
 
   mediaRecorder.addEventListener("dataavailable", (event) => {
@@ -305,12 +313,13 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
   });
 
   setInterval(() => {
-    mediaRecorder.stop();
+    mediaRecorder.stop(); // stop recording audio every 1.5 seconds
   }, 1500);
 
+  // When the audio recording stops, send a message to the server containing the array
   mediaRecorder.addEventListener("stop", () => {
     clientSocket.emit("audioMessage", audioChunks);
-    audioChunks = [];
-    mediaRecorder.start();
+    audioChunks = []; // empty the array
+    mediaRecorder.start(); // start recording again
   });
 });
