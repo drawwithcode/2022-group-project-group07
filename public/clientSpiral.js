@@ -238,7 +238,7 @@ function draw() {
     textSize(25);
     textLeading(30);
     textFont("regular");
-    text("You probably haven't read our Terms and Conditions.", 8, 20, 300);
+    text("You probably have not read our Terms and Conditions.", 8, 20, 300);
     pop();
 
     //after a little bit of time the button GO READ to return to the terms and conditions is shown
