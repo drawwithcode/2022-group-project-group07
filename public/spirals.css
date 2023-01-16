@@ -18,6 +18,16 @@ body {
   src: url('./assets/ArmoukRegular.otf');
 }
 
-/* Montserrat: ci sono tutti i pesi */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@font-face {
+  /* text font */
+  font-family: 'Montserrat-Regular';
+  src: url('./assets/Montserrat-Regular.ttf');
+}
 
+@font-face {
+  /* text font 2 */
+  font-family: 'Montserrat-Bold';
+  src: url('./assets/Montserrat-Bold.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
