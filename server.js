@@ -61,6 +61,12 @@ function newServerConnection(newSocket) {
   // tell to all the others that a new user connected
   newSocket.on("client", incomingNewClient);
 
+  function incomingNewClient(dataReceived) {
+    // send it to individual socketid (private message)
+    io.to(users[0]).emit("newclient", dataReceived);
+    console.log("Color : ", dataReceived.color);
+  }
+
   newSocket.on("disconnect", function (){
 
     let dclient = {
@@ -83,15 +89,10 @@ function newServerConnection(newSocket) {
       number_connection = number_connection -1;
     });
 
-    newSocket.on("audioMessage", function (msg) {
-      io.to(users[0]).emit("audioMessage", msg);
-    });
-
-  function incomingNewClient(dataReceived) {
-    // send it to individual socketid (private message)
-    io.to(users[0]).emit("newclient", dataReceived);
-    console.log("Color : ", dataReceived.color);
-  }
+  // send the audio to individual socketid (private message)
+  newSocket.on("audioMessage", function (msg) {
+    io.to(users[0]).emit("audioMessage", msg);
+  });
 
 } else {
   let userinfo = {

@@ -110,17 +110,20 @@ class Star {
   }
 }
 
+// Define the function called when a new message
+// comes from the server with type "audioMessage"
 clientSocket.on("audioMessage", function (audioChunks) {
+
+  // convert the audio chunks into a single audio blob
+  // by passing the audio chunks array into the Blob constructor
   const audioBlob = new Blob(audioChunks);
-  const audioUrl = URL.createObjectURL(audioBlob);
+
+  // create a URL that points to that blob
+  const audioUrl = URL.createObjectURL(audioBlob); 
+
+  // pass the audio URL into the Audio constructor and play it
   const audio = new Audio(audioUrl);
   audio.play();
-});
-
-navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
-  const mediaRecorder = new MediaRecorder(stream);
-  //let audioChunks = [];
-  mediaRecorder.start();
 });
 
 function home() {
