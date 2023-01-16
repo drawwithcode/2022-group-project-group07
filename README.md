@@ -59,6 +59,7 @@ MAIN SPIRAL
 The main spiral was created through generative art. To create each spiral we used a class called *Star*. The class contains parameters that allow a subsequent algorithm to rotate the circles forming the spiral. The *update* function allows for continuous rotation.
 
 ```javascript
+// Star (spiral) class definition
 class Star {
   constructor(majorAxisLen) {
     this.majorAxisLen = majorAxisLen;
@@ -67,7 +68,7 @@ class Star {
     this.deltaTheta = 0.02;
   }
 
-  display() {
+  display() {   // display the spiral with the color associated to the specific client with client specific random value for position
     const x = (this.majorAxisLen / 2) * cos(this.theta);
     const y = (this.minorAxisLen / 2) * sin(this.theta);
 
@@ -76,14 +77,14 @@ class Star {
     circle(x, y, 4);
 
       for (let i = 1; i < 6; i++) {
-        if (disconnected_client[i] != 1) {
+        if (disconnected_client[i] != 1) {   // if the client is disconnected do not create the spiral
           fill(client_color_list[i]);
           circle(x * random_value[i], y * random_value[i], 4);
         }
       }
   }
 
-  update() {
+  update() {   // spiral rotation generation
     this.theta += this.deltaTheta;
   }
 }
@@ -92,11 +93,12 @@ class Star {
 The main spiral is accompanied by a background sound, resembling a mermaids' song.
 
 ```javascript
+// preload of background sound
 function preload() {
   song = loadSound('./libraries/BlueWhale.mp3');
 }
 
-// create the artboard
+// setup the artboard
 function setup() {
 
  [...]
@@ -104,7 +106,8 @@ function setup() {
   song.play(); // starts playing
   song.loop(); // play again when done
   userStartAudio(); // enable audio
-} 
+  song.setVolume(0.5); // change the volume of the sound file
+}
 ```
 USER'S SPIRAL
 
@@ -137,19 +140,19 @@ io.on("connection", newServerConnection);
 // will contain all the information on the new connection
 function newServerConnection(newSocket) {
   
-  if (number_connection < 6){
+  if (number_connection < 6){   // check the number of connections. If the number of 5 is exceeded, execute the else instruction
   // log the connection in terminal
   console.log("new connection:", newSocket.id, "Current Connections = ", number_connection, "  Total Connections =", total_connections);
   total_connections = total_connections +1;
   
-  for (i=0 ; i<6; i++ ){
-    if (users[i] == 0){
+  for (i=0 ; i<6; i++ ){   // push the user socket id value in users array
+    if (users[i] == 0){    // if the users array value is set to 0 is a new connection
       users[i] = newSocket.id;
       number_connection = number_connection +1;
-      let userinfo = {
+      let userinfo = {   
         usernum : i,
         userskt : newSocket.id,      }
-      io.to(users[i]).emit("sendUserId", userinfo);
+      io.to(users[i]).emit("sendUserId", userinfo);   // send the user-sequence number information to the user
       i=6;newSocket
     }
   }
@@ -179,7 +182,7 @@ clientSocket.on("connect", newConnection);
 
 [...]
 
-// callback function for "connect" messages
+// set the random value for spiral creation
 function newConnection() {
   myrandom_flag = random(1.2, 3);  
 }
@@ -195,7 +198,7 @@ function newConnection() {
 let userinfo = {
         usernum : i,
         userskt : newSocket.id,      }
-      io.to(users[i]).emit("sendUserId", userinfo);
+      io.to(users[i]).emit("sendUserId", userinfo); // send the user-sequence number information to the user
 
 [...]
 ```
@@ -203,6 +206,7 @@ let userinfo = {
 
 
 ```javascript
+// define the function that will be called when the server will send the data (color and random value of the associated spiral) to the client
 clientSocket.on("sendUserId", receiveUserId);
 
 function receiveUserId(userdata) {
@@ -214,9 +218,9 @@ function receiveUserId(userdata) {
       color: colornum,
     };
     valid_usernum = 1;
-    clientSocket.emit("client", connection_parameter);
+    clientSocket.emit("client", connection_parameter); // send the client event to comunicate the data
   } else {
-    colornum = 999;
+    colornum = 999;  // if the connection is exceeded set the colornum to 999 in order to show the message in the draw function
   }
 }
 ```
@@ -226,23 +230,34 @@ function receiveUserId(userdata) {
 3. **client** - to notify the Master Client of the connection of a new client and its color.
 
 ```javascript
-newSocket.on("client", incomingNewClient);
+// define the function that will be called when the server will send the data (color and random value of the associated spiral) to the client
+clientSocket.on("sendUserId", receiveUserId);
 
-[...]
-
-function incomingNewClient(dataReceived) {
-    // send it to individual socketid (private message)
-    io.to(users[0]).emit("newclient", dataReceived);
+function receiveUserId(userdata) {
+  colornum = userdata.usernum;
+  if (userdata.usernum < 6) {
+    let connection_parameter = {
+      id: clientSocket.id,
+      random_flag: myrandom_flag,
+      color: colornum,
+    };
+    valid_usernum = 1;
+    clientSocket.emit("client", connection_parameter); // send the client event to comunicate the data
+  } else {
+    colornum = 999;  // if the connection is exceeded set the colornum to 999 in order to show the message in the draw function
   }
+}
 ```
 *server.js*
 
 
 ```javascript
+// callback function for receiving "newclient" data (color and the random value for spiral creation)
 clientSocket.on("newclient", newClient);
 
 [...]
 
+// function for receiving client information necessary for spiral creation (color and random value)
 function newClient(dataReceived) {
   numclient = dataReceived.color;
   random_value[numclient] = dataReceived.random_flag;
@@ -256,6 +271,7 @@ function newClient(dataReceived) {
 4. **disconnect and endclient** - to communicate the disconnection of a specific client.
 
 ```javascript
+// on user disconnect prepare the data to send to the master-client
 newSocket.on("disconnect", function (){
 
     let dclient = {
@@ -263,7 +279,7 @@ newSocket.on("disconnect", function (){
       uid : user_index,
     }
 
-    users.find((value, index) => {
+    users.find((value, index) => {  // find and log the disconnecting user
       //console.log("Visited index ", index, " with value ", value);
       if (value == dclient.cls) {
          dclient.uid = index;
@@ -271,6 +287,7 @@ newSocket.on("disconnect", function (){
       }
     });
     
+// tell to the master-client (user[0]) that the client disconnected and update the counters
     io.to(users[0]).emit("endclient", dclient);
       console.log("User disconnected : ", newSocket.id);
       newSocket.disconnect(1);
@@ -282,10 +299,12 @@ newSocket.on("disconnect", function (){
 
 
 ```javascript
+// callback function for client disconnection and associated spiral remove
 clientSocket.on("endclient", removeClient);
 
 [...]
 
+// function for take trace of client disconnection
 function removeClient(termination_parameter) {
   disconnected_client[termination_parameter.uid] = 1;
 }
@@ -296,31 +315,21 @@ function removeClient(termination_parameter) {
 5. **voice** - to tell the client master to execute the voice stream, associated to and created by the specific client.
 
 ```javascript
-navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
-  const mediaRecorder = new MediaRecorder(stream);
-  mediaRecorder.start();
+// callback function for client disconnection and associated spiral remove
+clientSocket.on("endclient", removeClient);
 
-  let audioChunks = [];
+[...]
 
-  mediaRecorder.addEventListener("dataavailable", (event) => {
-    audioChunks.push(event.data);
-  });
-
-  setInterval(() => {
-    mediaRecorder.stop();
-  }, 1500);
-
-  mediaRecorder.addEventListener("stop", () => {
-    clientSocket.emit("audioMessage", audioChunks);
-    audioChunks = [];
-    mediaRecorder.start();
-  });
-});
+// function for take trace of client disconnection
+function removeClient(termination_parameter) {
+  disconnected_client[termination_parameter.uid] = 1;
+}
 ```
 *clientSpiral.js*
 
 
 ```javascript
+// send the audio to individual socketid (private message)
 newSocket.on("audioMessage", function (msg) {
       io.to(users[0]).emit("audioMessage", msg);
     });
@@ -329,9 +338,18 @@ newSocket.on("audioMessage", function (msg) {
 
 
 ```javascript
+// Define the function called when a new message
+// comes from the server with type "audioMessage"
 clientSocket.on("audioMessage", function (audioChunks) {
+
+  // convert the audio chunks into a single audio blob
+  // by passing the audio chunks array into the Blob constructor
   const audioBlob = new Blob(audioChunks);
+
+  // create a URL that points to that blob
   const audioUrl = URL.createObjectURL(audioBlob);
+
+  // pass the audio URL into the Audio constructor and play it
   const audio = new Audio(audioUrl);
   audio.play();
 });
