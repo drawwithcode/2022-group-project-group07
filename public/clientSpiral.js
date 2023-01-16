@@ -56,7 +56,8 @@ function newConnection() {
 }
 
 function preload() {
-  myfont = loadFont('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  regular = loadFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  bold = loadFont('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 }
 
 // create the artboard
@@ -114,9 +115,14 @@ function setup() {
 function draw() {
 
   if (colornum === 999) {
-    fill("black");
-    textSize(100);
-    text("Connection Exceeded !!", windowWidth / 2 - 100, windowHeight / 2);
+    background(0);
+    fill("white");
+    textFont("regular");
+    textSize(15);
+    textAlign(CENTER);
+    text("Ooops!", windowWidth/2, windowHeight/2 -30, 370);
+    text("There are too many users connected.", windowWidth/2, windowHeight/2, 370);
+    text("Please try again later!", windowWidth/2, windowHeight/2 + 30, 370);
   }
   if (colornum != 999 && valid_usernum !=  0) {
   fill(colors[colornum]);
@@ -222,7 +228,7 @@ function draw() {
     fill("white");
     textSize(27);
     textLeading(40);
-    textFont("myfont");
+    textFont("bold");
     text(
       "MERMAID HAS STOLEN YOUR SENSITIVE DATA. NOW IT'S TOO LATE TO REMEDY THE DAMAGE!",
       4,
@@ -231,7 +237,7 @@ function draw() {
     );
     textSize(25);
     textLeading(30);
-    textFont("Montserrat-Regular");
+    textFont("regular");
     text("You probably haven't read our Terms and Conditions.", 8, 20, 300);
     pop();
 
@@ -244,7 +250,7 @@ function draw() {
       push();
       fill("red");
       textSize(20);
-      textFont("myfont");
+      textFont("bold");
       text("Click to find out what you have accepted!", 5, height/4, 300);
       pop();
     }
