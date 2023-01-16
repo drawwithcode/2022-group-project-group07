@@ -56,7 +56,7 @@ function newConnection() {
 }
 
 function preload() {
-  regular = loadFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  //regular = loadFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
   bold = loadFont('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 }
 
