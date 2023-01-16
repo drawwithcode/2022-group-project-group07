@@ -72,7 +72,7 @@ function setup() {
   //first button: it's created here and then hide untill we need it, so it's create only one time
   button = createButton("info");
   button.style("font-size", "23px");
-  button.style("font-family", "Montserrat");
+  button.style("font-family", Montserrat-Regular);
   button.style("color", "white");
   button.style("background-color", "#15A3FF");
   button.style("border", "2px solid #15A3FF");
@@ -84,7 +84,7 @@ function setup() {
   //second button: it's created here and then hide untill we need it, so it's create only one time
   button2 = createButton("go read");
   button2.style("font-size", "23px");
-  button2.style("font-family", "Montserrat");
+  button2.style("font-family", Montserrat-Regular);
   button2.style("color", "white");
   button2.style("background-color", "#15A3FF");
   button2.style("border", "2px solid #15A3FF");
@@ -96,7 +96,7 @@ function setup() {
   //esc button: it's created here and then hide untill we need it, so it's create only one time
   esc = createButton("X");
   esc.style("font-size", "15px");
-  esc.style("font-family", "Montserrat");
+  esc.style("font-family", Montserrat-Regular);
   esc.style("color", "white");
   esc.style("background-color", "#15A3FF");
   esc.style("border", "2px solid #15A3FF");
