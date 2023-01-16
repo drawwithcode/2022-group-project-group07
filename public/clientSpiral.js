@@ -230,7 +230,7 @@ function draw() {
     textLeading(40);
     textFont("bold");
     text(
-      "MERMAID HAS STOLEN YOUR SENSITIVE DATA. NOW IT'S TOO LATE TO REMEDY THE DAMAGE!",
+      "MERMAID HAS STOLEN YOUR SENSITIVE DATA. NOW IT IS TOO LATE TO REMEDY THE DAMAGE!",
       4,
       (-height / 8) * 2,
       370
