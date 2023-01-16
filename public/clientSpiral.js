@@ -33,6 +33,7 @@ let clientSocket = io();
 // define the function that will be called on a new newConnection
 clientSocket.on("connect", newConnection);
 
+// define the function that will be called when the server will send the data (color and random value of the associated spiral) to the client
 clientSocket.on("sendUserId", receiveUserId);
 
 function receiveUserId(userdata) {
@@ -44,18 +45,18 @@ function receiveUserId(userdata) {
       color: colornum,
     };
     valid_usernum = 1;
-    clientSocket.emit("client", connection_parameter);
+    clientSocket.emit("client", connection_parameter);  // send the client event to comunicate the data
   } else {
-    colornum = 999;
+    colornum = 999;  // if the connection is exceeded set the colornum to 999 in order to show the message in the draw function
   }
 }
 
-// callback function for "connect" messages
+// set the random value for spiral creation
 function newConnection() {
   myrandom_flag = random(1.2, 3);
 }
 
-// create the artboard
+// setup the artboard
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
@@ -98,7 +99,7 @@ function setup() {
 // draw
 function draw() {
 
-  if (colornum === 999) {
+  if (colornum === 999) {  // if colornum is 999 number of connection exceeed
     background(0);
     fill("white");
     textFont("Montserrat-Regular");
@@ -108,7 +109,7 @@ function draw() {
     text("There are too many users connected.", windowWidth/2, windowHeight/2, 370);
     text("Please try again later!", windowWidth/2, windowHeight/2 + 30, 370);
   }
-  if (colornum != 999 && valid_usernum !=  0) {
+  if (colornum != 999 && valid_usernum !=  0) {  // if the connections are not exceeded draw the mermaid spiral on client terminal
   fill(colors[colornum]);
   
   translate(width / 2, height / 2);
