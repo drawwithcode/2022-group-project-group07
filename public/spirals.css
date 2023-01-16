@@ -16,11 +16,7 @@ body {
   /* Mermaid font */
   font-family: 'ArmoukRegular';
   src: url('./assets/ArmoukRegular.otf');
-
-  /* text font */
-  font-family: 'Montserrat-Regular';
-  src: url('./assets/Montserrat-Regular.ttf');
-
-  font-family: 'Montserrat-Bold';
-  src: url('./assets/Montserrat-Bold.ttf');
 }
+
+/* text font (Montserrat) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
