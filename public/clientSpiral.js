@@ -1,16 +1,4 @@
-let colors = [
-  "white",
-  "red",
-  "green",
-  "violet",
-  "orange",
-  "pink",
-  "azure",
-  "yellow",
-  "purple",
-  "lime",
-  "fucsia",
-];
+let colors = ["white", "DodgerBlue", "SpringGreen", "Yellow", "DarkOrange", "Magenta"];
 let colornum;
 let newColor;
 let myrandom_flag;

@@ -1,17 +1,5 @@
 let button;
-let colors = [
-  "white",
-  "red",
-  "green",
-  "violet",
-  "orange",
-  "pink",
-  "azure",
-  "yellow",
-  "purple",
-  "lime",
-  "fucsia",
-];
+let colors = ["white", "DodgerBlue", "SpringGreen", "Yellow", "DarkOrange", "Magenta"];
 let noOfStars = 2000,
   sizeDiff = 0.5,
   majorAxisMinLen = 150,
@@ -107,12 +95,12 @@ class Star {
 
     noStroke();
     fill(255, 255, 255, 100);
-    circle(x, y, 4);
+    circle(x, y, 5);
 
       for (let i = 1; i < 6; i++) {
         if (disconnected_client[i] != 1) {
           fill(client_color_list[i]);
-          circle(x * random_value[i], y * random_value[i], 4);
+          circle(x * random_value[i], y * random_value[i], 5);
         }
       }
   }
