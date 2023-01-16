@@ -25,10 +25,13 @@ function newConnection() {
   console.log("your id:", clientSocket.id);
 }
 
+// callback function for receiving "newclient" data (color and the random value for spiral creation)
 clientSocket.on("newclient", newClient);
 
+// callback function for client disconnection and associated spiral remove
 clientSocket.on("endclient", removeClient);
 
+// preload of background sound
 function preload() {
   song = loadSound("./assets/BlueWhale.mp3");
 }
@@ -67,8 +70,7 @@ function draw() {
   }
 }
 
-// Callback function called when a new message comes from the server
-// Data parameters will contain the received data
+// function for receiving client information necessary for spiral creation (color and random value)
 
 function newClient(dataReceived) {
   numclient = dataReceived.color;
@@ -77,10 +79,12 @@ function newClient(dataReceived) {
   client_color_list[numclient] = colors[numclient];
 }
 
+// function for take trace of client disconnection
 function removeClient(termination_parameter) {
   disconnected_client[termination_parameter.uid] = 1;
 }
 
+// Star (spiral) class definition 
 class Star {
   constructor(majorAxisLen) {
     this.majorAxisLen = majorAxisLen;
@@ -89,7 +93,7 @@ class Star {
     this.deltaTheta = 0.02;
   }
 
-  display() {
+  display() {   // display the spiral with the color associated to the specific client with client specific random value for position
     const x = (this.majorAxisLen / 2) * cos(this.theta);
     const y = (this.minorAxisLen / 2) * sin(this.theta);
 
@@ -98,14 +102,14 @@ class Star {
     circle(x, y, 5);
 
       for (let i = 1; i < 6; i++) {
-        if (disconnected_client[i] != 1) {
+        if (disconnected_client[i] != 1) {  // if the client is disconnected do not create the spiral
           fill(client_color_list[i]);
           circle(x * random_value[i], y * random_value[i], 5);
         }
       }
   }
 
-  update() {
+  update() {  // spiral rotation generation
     this.theta += this.deltaTheta;
   }
 }
@@ -126,6 +130,7 @@ clientSocket.on("audioMessage", function (audioChunks) {
   audio.play();
 });
 
+// function called when home button is presses
 function home() {
   // Open in the same window the following url:
   window.open("./html pages/home.html", "_blank");
