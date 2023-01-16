@@ -55,11 +55,6 @@ function newConnection() {
   myrandom_flag = random(1.2, 3);
 }
 
-function preload() {
-  //regular = loadFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-  myFont = loadFont('https://fonts.cdnfonts.com/css/montserrat');
-}
-
 // create the artboard
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -117,7 +112,7 @@ function draw() {
   if (colornum === 999) {
     background(0);
     fill("white");
-    textFont("regular");
+    textFont("Montserrat-Regular");
     textSize(15);
     textAlign(CENTER);
     text("Ooops!", windowWidth/2, windowHeight/2 -30, 370);
@@ -228,7 +223,7 @@ function draw() {
     fill("white");
     textSize(27);
     textLeading(40);
-    textFont("myFont");
+    textFont("Montserrat-Bold");
     text(
       "MERMAID HAS STOLEN YOUR SENSITIVE DATA. NOW IT IS TOO LATE TO REMEDY THE DAMAGE!",
       4,
@@ -237,7 +232,7 @@ function draw() {
     );
     textSize(25);
     textLeading(30);
-    textFont("regular");
+    textFont("Montserrat-Regular");
     text("You probably have not read our Terms and Conditions.", 8, 20, 300);
     pop();
 
@@ -250,7 +245,7 @@ function draw() {
       push();
       fill("red");
       textSize(20);
-      textFont("myFont");
+      textFont("Montserrat-Bold");
       text("Click to find out what you have accepted!", 5, height/4, 300);
       pop();
     }
