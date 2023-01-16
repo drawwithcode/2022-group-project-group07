@@ -214,7 +214,7 @@ function draw() {
     textLeading(40);
     textFont("Montserrat-Bold");
     text(
-      "MERMAID HAS STOLEN YOUR SENSITIVE DATA. NOW IT IS TOO LATE TO REMEDY THE DAMAGE!",
+      "MERMAID HAS STOLEN YOUR SENSITIVE DATA. NOW IT'S TOO LATE TO REMEDY THE DAMAGE!",
       4,
       (-height / 8) * 2,
       370
@@ -222,7 +222,7 @@ function draw() {
     textSize(25);
     textLeading(30);
     textFont("Montserrat-Regular");
-    text("You probably have not read our Terms and Conditions.", 8, 20, 300);
+    text("You probably haven't read our Terms and Conditions.", 8, 20, 300);
     pop();
 
     //after a little bit of time the button GO READ to return to the terms and conditions is shown
