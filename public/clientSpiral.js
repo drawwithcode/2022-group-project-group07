@@ -57,7 +57,7 @@ function newConnection() {
 
 function preload() {
   //regular = loadFont('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-  bold = loadFont('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  myFont = loadFont('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 }
 
 // create the artboard
@@ -228,7 +228,7 @@ function draw() {
     fill("white");
     textSize(27);
     textLeading(40);
-    textFont("bold");
+    textFont("myFont");
     text(
       "MERMAID HAS STOLEN YOUR SENSITIVE DATA. NOW IT IS TOO LATE TO REMEDY THE DAMAGE!",
       4,
@@ -250,7 +250,7 @@ function draw() {
       push();
       fill("red");
       textSize(20);
-      textFont("bold");
+      textFont("myFont");
       text("Click to find out what you have accepted!", 5, height/4, 300);
       pop();
     }
