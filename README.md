@@ -111,8 +111,85 @@ function setup() {
 ```
 USER'S SPIRAL
 
-The user's spiral takes the camera information
-[DESCRIZIONE DA AGGIUNGERE]
+[METTERE GIF SPIRALE!!![]
+
+The user's spiral was created through generative art. To obtain every circle, we used a function called *pointCalculator* that is launched for every point through two *loop*. *pointCalculator* takes the video's pixel and calculates the x and y of every corrispondent circle. The radius of the circle depends on the distance of the user from the camera. 
+
+```javascript
+function draw() {
+   
+   [...]
+
+    //static image
+    for (var y = 0; y < video.height; y++) {
+      for (var x = 0; x < video.width; x++) {
+        pointCalculator(x, y);
+        circle(circleX, circleY, w);
+      }
+    }
+
+   [...]
+
+   //function that calculates the circles that simulate camera
+function pointCalculator(x, y) {
+  index = (video.width - x + 1 + y * video.width) * 4;
+  r = video.pixels[index + 0];
+  g = video.pixels[index + 1];
+  b = video.pixels[index + 2];
+  bright = (r + g + b) / 3;
+  w = map(bright, 5, 255, 0, vScale);
+  circleX = x * 10 + 30;
+  circleY = y * 10 + 100;
+  return w, circleX, circleY;
+}
+```
+Beside the static image, the user's spiral is made of 3 different images representation that rotates at different speeds. The rotations start at different *frameCount*, to allow differentiation of flows and to see particles continuously depart from the static image.
+
+```javascript
+//third moving image
+    for (var y = 0; y < video.height; y++) {
+      for (var x = 0; x < video.width; x++) {
+        pointCalculator(x, y);
+        rotate(rotationGradient3);
+        circle(circleX, circleY, w);
+      }
+
+      //start rotation3
+      if (frameCount > 900) {
+        rotationGradient3 -= 0.00001 + rotationValue;
+        rotationValue += 0.00000001;
+      }
+    }
+
+    //second moving image
+    for (var y = 0; y < video.height; y++) {
+      for (var x = 0; x < video.width; x++) {
+        pointCalculator(x, y);
+        rotate(rotationGradient2);
+        circle(circleX, circleY, w);
+      }
+
+      //start rotation2
+      if (frameCount > 600) {
+        rotationGradient2 -= 0.00001;
+      }
+    }
+
+    //first moving image
+    for (var y = 0; y < video.height; y++) {
+      for (var x = 0; x < video.width; x++) {
+        pointCalculator(x, y);
+        rotate(rotationGradient);
+        circle(circleX, circleY, w);
+      }
+
+      //start rotation1
+      if (frameCount > 300) {
+        rotationGradient -= 0.00001;
+      }
+    }
+```
+
 
 ## **Coding challenges**
 
