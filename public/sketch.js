@@ -11,6 +11,7 @@ let myrandom_flag = 0;
 let random_value = [];
 let disconnected_client = [0, 1, 1, 1, 1, 1];
 let client_color_list = [];
+let qr;
 
 // Create a new connection using socket.io (imported in index.html)
 // make sure you added the following line to index.html:
@@ -40,10 +41,6 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  button = createButton("click me");
-  button.position(windowWidth - 80, windowHeight - 50);
-  button.mousePressed(home);
-
   rotationGradient = PI / noOfStars;
   for (let i = 0; i < noOfStars; i++) {
     const majorAxisLen = majorAxisMinLen + i * sizeDiff;
@@ -68,6 +65,21 @@ function draw() {
     stars[i].display();
     stars[i].update();
   }
+
+  push();
+  resetMatrix();
+  fill("#15A3FF");
+  textFont("ArmoukRegular");
+  textSize(96);
+  text("MERMAID", width - 350, height - 200);
+ 
+  fill("white");
+  textSize(32);
+  textFont("Montserrat-Regular");
+  text("Join us!", width - 350, height - 115);
+
+  image(qr, width - 175, height - 175, qr.width/10, qr.height/10);
+  pop();
 }
 
 // function for receiving client information necessary for spiral creation (color and random value)
