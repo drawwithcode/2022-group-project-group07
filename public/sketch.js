@@ -35,6 +35,7 @@ clientSocket.on("endclient", removeClient);
 // preload of background sound
 function preload() {
   song = loadSound("./assets/BlueWhale.mp3");
+  qr = loadImage("./assets/qrcode.jpg");
 }
 
 // create the artboard
@@ -78,7 +79,7 @@ function draw() {
   textFont("Montserrat-Regular");
   text("Join us!", width - 350, height - 115);
 
-  image(qr, width - 175, height - 175, 1147/10, 1147/10);
+  image(qr, width - 175, height - 175, qr.width/10, qr.height/10);
   pop();
 }
 
