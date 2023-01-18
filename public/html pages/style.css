@@ -479,8 +479,14 @@ body {
 
 /* classe che serve per mettere frasi in grassetto all'interno del testo */
 .bold {
-  display: block;
+  display: inline;
   font-weight: 700;
+}
+
+mark {
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
 }
 
 /* scritta "I agree to the Terms of Service" */

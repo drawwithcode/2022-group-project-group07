@@ -70,7 +70,7 @@ function setup() {
   noStroke();
   textAlign(CENTER);
 
-  //first button: it's created here and then hide untill we need it, so it's create only one time
+  //first button: it's created here and then hide until we need it, so it's create only one time
   button = createButton("info");
   button.addClass("buttons");
   button.style("border-radius", "30px");
@@ -78,7 +78,7 @@ function setup() {
   button.position(width / 2 - 60, (height / 7) * 6);
   button.hide();
 
-  //second button: it's created here and then hide untill we need it, so it's create only one time
+  //second button: it's created here and then hide until we need it, so it's create only one time
   button2 = createButton("go read");
   button2.addClass("buttons");
   button2.style("border-radius", "35px");
