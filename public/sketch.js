@@ -74,9 +74,9 @@ function draw() {
   text("MERMAID", 55, 90);
  
   textAlign(RIGHT);
-  textSize(19);
+  textSize(23);
   textFont("Montserrat-Regular");
-  text("Join us!", width - 170, height - 103);
+  text("Join us!", width - 55, height - 170);
  
   image(qr, width - 145, height - 155, qr.width/12, qr.height/12);
   pop();
