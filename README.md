@@ -54,9 +54,9 @@ The project is composed by: <br>
 ## **Visual aspect**
 MAIN SPIRAL
 
-[METTERE GIF SPIRALE!!![]
+![Main](readme/mermaid_main_spiral.gif)<br>
 
-The main spiral was created through generative art. To create each spiral we used a class called *Star*. The class contains parameters that allow a subsequent algorithm to rotate the circles forming the spiral. The *update* function allows for continuous rotation.
+The main spiral was created through generative art. To create each spiral we used a class called `Star`. The class contains parameters that allow a subsequent algorithm to rotate the circles forming the spiral. The `update` function allows for continuous rotation.
 
 ```javascript
 // Star (spiral) class definition
@@ -111,9 +111,9 @@ function setup() {
 ```
 USER'S SPIRAL
 
-[METTERE GIF SPIRALE!!![]
+![Client](readme/mermaid_client_spiral.gif)<br>
 
-The user's spiral was created through generative art. To obtain every circle, we used a function called *pointCalculator* that is launched for every point through two *loop*. *pointCalculator* takes the video's pixel and calculates the x and y of every corrispondent circle. The radius of the circle depends on the distance of the user from the camera. 
+The user's spiral was created through generative art. To obtain every circle, we used a function called `pointCalculator` that is launched for every point through two `loop`. `pointCalculator` takes the video's pixel and calculates the x and y of every corrispondent circle. The radius of the circle depends on the distance of the user from the camera. 
 
 ```javascript
 function draw() {
@@ -143,7 +143,7 @@ function pointCalculator(x, y) {
   return w, circleX, circleY;
 }
 ```
-Beside the static image, the user's spiral is made of 3 different images representation that rotates at different speeds. The rotations start at different *frameCount*, to allow differentiation of flows and to see particles continuously depart from the static image.
+Beside the static image, the user's spiral is made of 3 different images representation that rotates at different speeds. The rotations start at different `frameCount`, to allow differentiation of flows and to see particles continuously depart from the static image.
 
 ```javascript
 //third moving image
@@ -207,7 +207,7 @@ The master client displays the main spiral and receives data from the other clie
 
 The events used are:
 
-1. **connect**  - for client connection
+1. `connect`  - for client connection
 ```javascript
 // define which function should be called
 // when a new connection is opened from client
@@ -267,7 +267,7 @@ function newConnection() {
 *clientSpiral.js*
 
 
-2. **sendUserId** - for client identification, required for unique color association.
+2. `sendUserId` - for client identification, required for unique color association.
 
 ```javascript
 [...]
@@ -304,7 +304,7 @@ function receiveUserId(userdata) {
 *clientSpiral.js*
 
 
-3. **client** - to notify the Master Client of the connection of a new client and its color.
+3. `client` - to notify the Master Client of the connection of a new client and its color.
 
 ```javascript
 // define the function that will be called when the server will send the data (color and random value of the associated spiral) to the client
@@ -345,7 +345,7 @@ function newClient(dataReceived) {
 *sketch.js*
 
 
-4. **disconnect and endclient** - to communicate the disconnection of a specific client.
+4. `disconnect and endclient` - to communicate the disconnection of a specific client.
 
 ```javascript
 // on user disconnect prepare the data to send to the master-client
@@ -389,7 +389,7 @@ function removeClient(termination_parameter) {
 *sketch.js*
 
 
-5. **voice** - to tell the client master to execute the voice stream, associated to and created by the specific client.
+5. `voice` - to tell the client master to execute the voice stream, associated to and created by the specific client.
 
 ```javascript
 // callback function for client disconnection and associated spiral remove
