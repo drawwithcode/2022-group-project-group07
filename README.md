@@ -1,7 +1,7 @@
 ![Banner](readme/banner.png)<br>
 
 # **About**
-Mermaid is a web experience built on p5.js with the aim of raising awareness of acceptance of the terms and conditions of use we encounter on the web. <br>
+Mermaid is a web exhibition built on p5.js with the aim of raising awareness of acceptance of the terms and conditions of use we encounter on the web. <br>
 Mermaid was developed as a part of the Creative Coding course at Politecnico di Milano.
 
 # **Table of Contents**
