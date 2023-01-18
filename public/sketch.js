@@ -68,6 +68,7 @@ function draw() {
   push();
   resetMatrix();
   fill("white");
+  textAlign(RIGHT);
   textFont("ArmoukRegular");
   textSize(70);
   text("MERMAID", width - 350, height - 200);
