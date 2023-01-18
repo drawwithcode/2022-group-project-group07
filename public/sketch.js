@@ -66,19 +66,18 @@ function draw() {
   }
 
   push();
-  resetMatrix();
-  fill("white");
-  textAlign(RIGHT);
-  textFont("ArmoukRegular");
-  textSize(70);
-  text("MERMAID", width - 70, height - 200);
- 
-  fill("white");
-  textSize(20);
-  textFont("Montserrat-Regular");
-  text("Join us!", width - 210, height - 115);
- 
-  image(qr, width - 175, height - 175, qr.width/10, qr.height/10);
+    resetMatrix();
+    fill("white");
+    textAlign(RIGHT);
+    textFont("ArmoukRegular");
+    textSize(60);
+    text("MERMAID", width - 70, height - 200);
+   
+    textSize(19);
+    textFont("Montserrat-Regular");
+    text("Join us!", width - 180, height - 123);
+   
+    image(qr, width - 165, height - 175, qr.width/12, qr.height/12);
   pop();
 }
 
