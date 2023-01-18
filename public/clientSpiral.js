@@ -64,7 +64,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   video = createCapture(VIDEO);
-  video.size(video.width / 20, video.height / 16);
+  video.size(video.width / 30, video.height / 10);
   video.hide();
   
   noStroke();
@@ -245,7 +245,7 @@ function draw() {
 
 //function that calculates the circles that simulate camera
 function pointCalculator(x, y) {
-  index = (video.width - x + 1 + y * video.width) * 4;
+  index = (video.width - x - 1 + y * video.width) * 4;
   r = video.pixels[index + 0];
   g = video.pixels[index + 1];
   b = video.pixels[index + 2];
