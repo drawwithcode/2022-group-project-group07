@@ -71,12 +71,12 @@ function draw() {
   textAlign(RIGHT);
   textFont("ArmoukRegular");
   textSize(70);
-  text("MERMAID", width - 350, height - 200);
+  text("MERMAID", width - 70, height - 200);
  
   fill("white");
   textSize(20);
   textFont("Montserrat-Regular");
-  text("Join us!", width - 350, height - 115);
+  text("Join us!", width - 210, height - 115);
  
   image(qr, width - 175, height - 175, qr.width/10, qr.height/10);
   pop();
