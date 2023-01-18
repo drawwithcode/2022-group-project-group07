@@ -32,7 +32,7 @@ The name Mermaid is derived from Greek mythology, where mermaids were bewitchers
 
 # **Structure and interaction**
 
-SPACE FOR THE STRUCTURE <br>
+![Interaction](readme/interaction.png)<br>
 
 The project is composed by: <br>
 1. **The representation on the projector,** that is p5 sketch of a spiral made with the data that arrives from every client that is going to connect to this project. Everytime a new client arrives the color of the client is shown in the spiral. In this page there's also the "song of Mermaid" which consists of a base and the sounds that mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid; 
@@ -197,7 +197,7 @@ SERVER-CLIENT COMMUNICATION
 
 One of the most complex parts we had to deal with was the client-server communication we needed to implement our interactive digital exhibition.
 
-[disegno client server]
+![Server](readme/server_client.png)<br>
 
 For the realisation of the server, a java script (*server.js*) was created and executed by the framework called *node.js*.
 
@@ -435,7 +435,17 @@ clientSocket.on("audioMessage", function (audioChunks) {
 
 ## **References and tutorials**
 
-[mettere reference e tutorial]
+[Daniel Shiffman - The coding train](https://thecodingtrain.com/)
+
+[socket.io](https://socket.io)
+
+[OpenProcessing](https://openprocessing.org)
+
+[Medium](https://medium.com)
+
+[Stack Overflow](https://stackoverflow.com)
+
+
 
 
 # **Team**
