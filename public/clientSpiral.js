@@ -27,7 +27,6 @@ let logotype;
 
 // Create a new connection using socket.io (imported in index.html)
 // make sure you added the following line to index.html:
-// <script src="/socket.io/socket.io.js"></script>
 let clientSocket = io();
 
 // define the function that will be called on a new newConnection
@@ -70,7 +69,7 @@ function setup() {
   noStroke();
   textAlign(CENTER);
 
-  //first button: it's created here and then hide until we need it, so it's create only one time
+  //first button: it's created here and then hide until we need it, so it's created only one time
   button = createButton("info");
   button.addClass("buttons");
   button.style("border-radius", "30px");
@@ -78,7 +77,7 @@ function setup() {
   button.position(width / 2 - 60, (height / 7) * 6);
   button.hide();
 
-  //second button: it's created here and then hide until we need it, so it's create only one time
+  //second button: it's created here and then hide until we need it, so it's created only one time
   button2 = createButton("go read");
   button2.addClass("buttons");
   button2.style("border-radius", "35px");
@@ -86,7 +85,7 @@ function setup() {
   button2.position(width / 2 - 70, (height / 7) * 6);
   button2.hide();
 
-  //esc button: it's created here and then hide untill we need it, so it's create only one time
+  //esc button: it's created here and then hide until we need it, so it's created only one time
   esc = createButton("X");
   esc.addClass("buttons");
   esc.style("font-size", "15px");
@@ -127,8 +126,7 @@ function draw() {
       }
     }
 
-    //the moving images are in decrescent order to activate 
-    //the personal rotations without conflict with eachother
+    //the moving images are in decrescent order to activate the personal rotations without conflict with each other
 
     //third moving image
     for (var y = 0; y < video.height; y++) {
@@ -280,8 +278,7 @@ function returnSpiral() {
 // prompts the user for permission to use a media input, in this case audio
 navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
 
-  // If the user accepts, the promise is resolved with an audio stream
-  // that is passed into the MediaRecorder constructor
+  // If the user accepts, the promise is resolved with an audio stream that is passed into the MediaRecorder constructor
   const mediaRecorder = new MediaRecorder(stream);
 
   mediaRecorder.start(); // start recording audio

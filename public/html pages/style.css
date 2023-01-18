@@ -165,16 +165,12 @@ select {
   vertical-align: middle;
 }
 
-/* Il codice inizia qui*/
+/* the code starts here */
 * {
   box-sizing: border-box;
-
-  /* Include il border e il padding
-  nell'altezza e nella larghezza
-  totale di un elemento */
 }
 
-/* Versione mobile */
+/* mobile version */
 [class*='col-'] {
   width: 100%;
 }
@@ -187,21 +183,19 @@ body {
 
 body {
   background-color: #000000;
-  /* background-color: rgb(0, 31, 53); */
 }
 
 @font-face {
-  /* font di Mermaid */
+  /* Mermaid font */
   font-family: 'ArmoukRegular';
   src: url('../assets/ArmoukRegular.otf');
 }
 
-/* Montserrat: ci sono tutti i pesi */
+/* Montserrat font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 /* HOMEPAGE */
-
-/* div che contiene il titolo Mermaid */
+/* div that contains the title Mermaid */
 .titolo {
   height: 850px;
   margin-right: 0;
@@ -209,7 +203,7 @@ body {
   border-right: 0;
 }
 
-/* scritta Mermaid */
+/* Mermaid writing */
 .titolo1 {
   font-family: ArmoukRegular, serif;
   color: rgb(21, 163, 255);
@@ -225,7 +219,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* quadrato che contiene il vortice */
+/* square that contains the vortex */
 #square {
   height: 300px;
   width: 300px;
@@ -238,7 +232,7 @@ body {
   margin: auto;
   position: absolute;
 
-  /* colore di sfondo del vortice */
+  /* background colours of the vortex */
   background: radial-gradient(rgb(0, 0, 0), rgb(21, 163, 255), rgb(0, 0, 0));
   align-items: center;
   justify-content: center;
@@ -246,7 +240,7 @@ body {
   display: flex;
 }
 
-/* div che contiene le due scritte ai lati */
+/* div that contains the "welcome to our website" writing */
 #welcome {
   height: 200px;
   width: 20px;
@@ -255,7 +249,7 @@ body {
   border-right: 0;
 }
 
-/* scritta welcome to our website */
+/* writing "welcome to our website" */
 #welcome1 {
   font-family: ArmoukRegular, serif;
   color: rgb(255, 255, 255);
@@ -270,7 +264,7 @@ body {
   left: 0%;
 }
 
-/* pulsante "start" nella homepage */
+/* button "start" in the homepage */
 .button {
   font-family: 'Montserrat', sans-serif;
   color: rgb(255, 255, 255);
@@ -292,7 +286,7 @@ body {
   border-radius: 30px;
 }
 
-/* da qui in poi: proprietà vortice all'interno del quadrato */
+/* from here: vortex properties inside the square */
 .rings {
   position: relative;
   width: 400px;
@@ -411,9 +405,9 @@ body {
   aspect-ratio: 1/1;
 }
 
-/* SECONDA PAGINA (Accettazione dei TOS) */
+/* SECOND PAGE (Acceptance of TOS) */
 
-/* scritta bianca TOS */
+/* white writing of "Terms of Service" */
 #tos {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -430,7 +424,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* rettangolo azzurro grande */
+/* big light blue square */
 #rect1 {
   height: 480px;
   width: 300px;
@@ -445,7 +439,7 @@ body {
   clip-path: polygon(7% 1%, 93% 1%, 100% 1%, 100% 93%, 93% 100%, 1% 100%, 1% 93%, 1% 7%);
 }
 
-/* rett bianco dentro il rett azzurro grande */
+/* white square inside the blue one */
 #rect2 {
   height: 370px;
   width: 260px;
@@ -460,7 +454,7 @@ body {
   clip-path: polygon(10% -2%, 80% -2%, 100% -2%, 100% 92%, 92% 100%, -2% 100%, -2% 92%, -2% 10%);
 }
 
-/* testo all'interno del rettangolo bianco */
+/* text of the TOS, inside the white square */
 #testolungo {
   height: 340px;
   width: 240px;
@@ -477,19 +471,20 @@ body {
   line-height: normal;
 }
 
-/* classe che serve per mettere frasi in grassetto all'interno del testo */
+/* bold text */
 .bold {
   display: inline;
   font-weight: 700;
 }
 
+/* highlighted text */
 mark {
   font-style: normal;
   line-height: normal;
   font-weight: 400;
 }
 
-/* scritta "I agree to the Terms of Service" */
+/* writing "I agree to the Terms of Service" */
 #agree {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -527,7 +522,7 @@ mark {
   border-radius: 30px;
 }
 
-/* bottone "disagree" sulla sinistra */
+/* button "disagree" on the left */
 #button2 {
   font-family: 'Montserrat', sans-serif;
   color: rgb(255, 255, 255);
@@ -549,7 +544,7 @@ mark {
   border-radius: 30px;
 }
 
-/* bottone "agree" sulla destra */
+/* button "agree" on the right */
 #button3 {
   font-family: 'Montserrat', sans-serif;
   color: black;
@@ -584,9 +579,9 @@ input {
   margin: 0.4rem;
 }
 
-/* PAGINA DISAGREE */
+/* DISAGREE PAGE*/
 
-/* rettangolo nero sopra alla pagina dei tos */
+/* black rect that covers the TOS page */
 #black {
   height: 600px;
   width: 300px;
@@ -600,7 +595,7 @@ input {
   opacity: 0.7;
 }
 
-/* rettangolo bianco che compare sopra (popup) */
+/* white popup */
 #popup {
   height: 200px;
   width: 200px;
@@ -625,7 +620,7 @@ input {
   position: absolute;
 }
 
-/* scritta in bold "Are you sure?" */
+/* writing in bold "Are you sure?" */
 #sure {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -641,7 +636,7 @@ input {
   transform: translate(-50%, -50%);
 }
 
-/* scritta sotto "Are you sure?" */
+/* writing under "Are you sure?" */
 #scritta {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
@@ -657,7 +652,7 @@ input {
   transform: translate(-50%, -50%);
 }
 
-/* bottone "Yes I disagree" sulla sinistra */
+/* button "Yes I disagree" on the left */
 #button4 {
   font-family: 'Montserrat', sans-serif;
   color: rgb(21, 163, 255);
@@ -678,7 +673,7 @@ input {
   border-radius: 30px;
 }
 
-/* bottone "No" sulla destra */
+/* button "No" on the right */
 #button5 {
   font-family: 'Montserrat', sans-serif;
   color: white;
@@ -694,15 +689,13 @@ input {
   left: 63%;
   border: none;
   background-color: rgb(21, 163, 255);
-  /* border: 1.5px solid white; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   border-radius: 30px;
 }
 
-/* PAGINA CONGRATULATIONS */
-/* div che contiene il testo */
+/* CONGRATULATIONS PAGE */
 #testo {
   height: 400px;
   width: 300px;
@@ -725,7 +718,7 @@ input {
   line-height: normal;
 }
 
-/* testo sopra */
+/* text above */
 #testo1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -791,7 +784,7 @@ input {
 
 }
 
-/* testo sotto */
+/* text beneath */
 #testo2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -808,7 +801,7 @@ input {
   line-height: normal;
 }
 
-/* testo sopra */
+/* text above */
 #testo3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -826,7 +819,7 @@ input {
   animation: lights 5s 750ms linear infinite;
 }
 
-/* testo sotto */
+/* text beneath */
 #testo4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -872,7 +865,6 @@ input {
   transform: translate(-50%, -50%);
   position: absolute;
   display: inline-block;
-
 }
 
 .read {
@@ -907,7 +899,6 @@ input {
   -webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
   animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
-
 
 @-webkit-keyframes pulse-ring {
   0% {
@@ -971,9 +962,8 @@ input {
   border-radius: 30px;
 }
 
+/* Responsive Website for bigger mobile phones */
 @media screen and (min-height: 700px) {
-
-  /* rettangolo azzurro grande */
   #rect1 {
     height: 580px;
     width: 300px;
@@ -988,7 +978,6 @@ input {
     clip-path: polygon(7% 1%, 93% 1%, 100% 1%, 100% 93%, 93% 100%, 1% 100%, 1% 93%, 1% 7%);
   }
 
-  /* rett bianco dentro il rett azzurro grande */
   #rect2 {
     height: 470px;
     width: 260px;
@@ -1003,7 +992,6 @@ input {
     clip-path: polygon(10% -2%, 80% -2%, 100% -2%, 100% 92%, 92% 100%, -2% 100%, -2% 92%, -2% 10%);
   }
 
-  /* scritta bianca TOS */
   #tos {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -1020,7 +1008,6 @@ input {
     transform: translate(-50%, -50%);
   }
 
-  /* testo all'interno del rettangolo bianco */
   #testolungo {
     height: 450px;
     width: 240px;
@@ -1047,7 +1034,6 @@ input {
     width: 12px;
   }
 
-  /* scritta "I agree to the Terms of Service" */
   #agree {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -1064,7 +1050,6 @@ input {
     transform: translate(-50%, -50%);
   }
 
-  /* rettangolo nero sopra alla pagina dei tos */
   #black {
     height: 700px;
     width: 300px;
@@ -1078,7 +1063,6 @@ input {
     opacity: 0.7;
   }
 
-  /* div che contiene il testo */
   #testo {
     height: 400px;
     width: 300px;
@@ -1090,7 +1074,6 @@ input {
     line-height: normal;
   }
 
-  /* testo sopra */
   #testo3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -1107,7 +1090,6 @@ input {
     line-height: 35px;
   }
 
-  /* testo sotto */
   #testo4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -1137,7 +1119,6 @@ input {
     position: absolute;
   }
 
-  /* testo sotto */
   #testo2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -1189,7 +1170,6 @@ input {
     border-right: 0;
   }
 
-  /* scritta welcome to our website */
   #welcome1 {
     font-family: ArmoukRegular, serif;
     color: rgb(255, 255, 255);

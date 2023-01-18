@@ -13,7 +13,6 @@ let qr;
 
 // Create a new connection using socket.io (imported in index.html)
 // make sure you added the following line to index.html:
-// <script src="/socket.io/socket.io.js"></script>
 let clientSocket = io();
 
 // define the function that will be called on a new newConnection
@@ -47,7 +46,7 @@ function setup() {
   }
 
   song.play(); // starts playing
-  song.loop(); // play again when done
+  song.loop(); // play again when the song is done
   userStartAudio(); // enable audio
   song.setVolume(0.5); // change the volume of the sound file
 }
@@ -91,7 +90,7 @@ function newClient(dataReceived) {
   client_color_list[numclient] = colors[numclient];
 }
 
-// function for take trace of client disconnection
+// function for taking trace of client disconnection
 function removeClient(termination_parameter) {
   disconnected_client[termination_parameter.uid] = 1;
 }
@@ -126,12 +125,10 @@ class Star {
   }
 }
 
-// Define the function called when a new message
-// comes from the server with type "audioMessage"
+// Define the function called when a new message comes from the server with type "audioMessage"
 clientSocket.on("audioMessage", function (audioChunks) {
 
-  // convert the audio chunks into a single audio blob
-  // by passing the audio chunks array into the Blob constructor
+  // convert the audio chunks into a single audio blob by passing the audio chunks array into the Blob constructor
   const audioBlob = new Blob(audioChunks);
 
   // create a URL that points to that blob
