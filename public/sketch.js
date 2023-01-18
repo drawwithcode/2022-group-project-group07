@@ -4,8 +4,6 @@ let noOfStars = 2000,
   sizeDiff = 0.5,
   majorAxisMinLen = 150,
   widthHeightRatio = 0.7,
-  rotationGradient,
-  rotationGradientSlider,
   stars = [];
 let myrandom_flag = 0;
 let random_value = [];
@@ -69,13 +67,13 @@ function draw() {
 
   push();
   resetMatrix();
-  fill("#15A3FF");
+  fill("white");
   textFont("ArmoukRegular");
-  textSize(96);
+  textSize(70);
   text("MERMAID", width - 350, height - 200);
  
   fill("white");
-  textSize(32);
+  textSize(20);
   textFont("Montserrat-Regular");
   text("Join us!", width - 350, height - 115);
  
