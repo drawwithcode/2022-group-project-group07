@@ -28,7 +28,7 @@ We have interpreted this concept of making visible what we cannot grasp with pas
 
 ## **Concept**
 
-The name Mermaid is derived from Greek mythology, where mermaids were bewitchers because of their good looks and song, but at the same time they were false because their goal was to lure visitors and then kill them. We transposed this concept to our project, where online services represent mermaids. The users can interact with Mermaid, and to do that they have to accept the Terms and Conditions of Mermaid. In this Terms and Conditions the users will be notified that their data is about to be stolen and will no longer be under their control; after you accept this terms, your camera and microphone data are going to be stolen by Mermaid, and they'll be represented in the projector representation. 
+The name Mermaid comes from Greek mythology, where mermaids were bewitchers because of their good looks and song, but at the same time they were false because their goal was to lure visitors and then kill them. We transposed this concept to our project, where online services represent mermaids. The users can interact with Mermaid, and to do that they have to accept the Terms and Conditions of Mermaid. In this Terms and Conditions the users will be notified that their data is about to be stolen and will no longer be under their control; after you accept this terms, your camera and microphone data are going to be stolen by Mermaid, and they'll be represented in the projector representation. 
 
 # **Structure and interaction**
 
