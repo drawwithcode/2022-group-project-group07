@@ -132,7 +132,7 @@ function draw() {
 
    //function that calculates the circles that simulate camera
 function pointCalculator(x, y) {
-  index = (video.width - x + 1 + y * video.width) * 4;
+  index = (video.width - x - 1 + y * video.width) * 4;
   r = video.pixels[index + 0];
   g = video.pixels[index + 1];
   b = video.pixels[index + 2];
