@@ -1,7 +1,7 @@
 ![Banner](readme/banner.png)<br>
 
 # **About**
-Mermaid is a web exhibition built on p5.js with the aim of raising awareness of acceptance of the terms and conditions of use we encounter on the web. <br>
+Mermaid is a digital exhibition built on p5.js with the aim of raising awareness of acceptance of the terms and conditions of use we encounter on the web. <br>
 Mermaid was developed as a part of the Creative Coding course at Politecnico di Milano.
 
 # **Table of Contents**
@@ -37,7 +37,7 @@ SPACE FOR THE STRUCTURE <br>
 The project is composed by: <br>
 1. **The representation on the projector,** that is p5 sketch of a spiral made with the data that arrives from every client that is going to connect to this project. Everytime a new client arrives the color of the client is shown in the spiral. In this page there's also the "song of Mermaid" which consists of a base and the sounds that mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid; 
 
-2. **The mermaid interface:** when the user scans the QR code in his device will appear the first HTML page of Mermaid. A pop up with the Terms and Conditions will appear, and then we have two options possible results:
+2. **The mermaid interface:** when the user scans the QR code in his device will appear the first HTML page of Mermaid. A pop up with the Terms and Conditions will appear, and then we have two possible options:
 
       * **The user clicks "Disagree"** - another pop up asking "are you sure you don't want to be a part of the Mermaid's community?" will appear. 
 
