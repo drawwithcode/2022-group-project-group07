@@ -20,7 +20,7 @@ Mermaid was developed as a part of the Creative Coding course at Politecnico di 
 
 ## **Theme**
 
-The project is inspired by the team of *presence*. In a world in which technology used in design products is rendered invisible and intangible, the challenge was to be able to highlight invisible steps that we fail to notice in our daily interaction with the world of technology. 
+The project is inspired by the theme of *presence*. In a world in which technology used in design products is rendered invisible and intangible, the challenge was to be able to highlight invisible steps that we fail to notice in our daily interaction with the world of technology. 
 
 ## **Aim**
 
@@ -32,7 +32,7 @@ The name Mermaid is derived from Greek mythology, where mermaids were bewitchers
 
 # **Structure and interaction**
 
-![Interaction](readme/interaction.png)<br>
+![Interaction](readme/interaction.svg)<br>
 
 The project is composed by: <br>
 1. **The representation on the projector,** that is p5 sketch of a spiral made with the data that arrives from every client that is going to connect to this project. Everytime a new client arrives the color of the client is shown in the spiral. In this page there's also the "song of Mermaid" which consists of a base and the sounds that mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid; 
@@ -197,7 +197,7 @@ SERVER-CLIENT COMMUNICATION
 
 One of the most complex parts we had to deal with was the client-server communication we needed to implement our interactive digital exhibition.
 
-![Server](readme/server_client.png)<br>
+![Server](readme/server_client.svg)<br>
 
 For the realisation of the server, a java script (*server.js*) was created and executed by the framework called *node.js*.
 
