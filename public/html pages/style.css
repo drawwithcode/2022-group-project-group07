@@ -1278,30 +1278,13 @@ input {
     height: 45px;
     position: absolute;
     text-align: center;
-    top: 7%;
+    top: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  #testolungo {
-    height: 420px;
-    width: 240px;
-    font-weight: 400;
-    padding: 20px;
-    padding-top: 20px;
-    margin: 20px;
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-style: normal;
-    font-size: 9pt;
-    margin: auto;
-    overflow-y: scroll;
-    line-height: normal;
-  }
-
   #checkbox {
-    top: 88.3%;
+    top: 88.7%;
     left: 13%;
     display: inline;
     position: absolute;
@@ -1320,129 +1303,9 @@ input {
     height: 45px;
     position: absolute;
     text-align: center;
-    top: 93.5%;
+    top: 93.9%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  #black {
-    height: 700px;
-    width: 300px;
-    background-color: black;
-    top: 59%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    margin: auto;
-    position: absolute;
-    opacity: 0.7;
-  }
-
-  #testo {
-    height: 400px;
-    width: 300px;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    display: inline-block;
-    line-height: normal;
-  }
-
-  #testo3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    font-style: normal;
-    font-size: 1.5em;
-    margin: auto;
-    width: 100%;
-    height: 45px;
-    position: absolute;
-    text-align: center;
-    top: 0%;
-    left: 0%;
-    line-height: 35px;
-  }
-
-  #testo4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-    font-style: normal;
-    font-size: 1.55em;
-    margin: auto;
-    width: 100%;
-    height: 45px;
-    position: absolute;
-    text-align: center;
-    top: 46%;
-    left: 0%;
-    line-height: 30px;
-  }
-
-  #square {
-    height: 330px;
-    width: 330px;
-    background-color: transparent;
-    border: 3px solid rgb(21, 163, 255);
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    margin: auto;
-    position: absolute;
-  }
-
-  #testo2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-    font-style: normal;
-    font-size: 1.28em;
-    margin: auto;
-    width: 100%;
-    height: 45px;
-    position: absolute;
-    text-align: center;
-    top: 45%;
-    left: 0%;
-    line-height: normal;
-  }
-
-  .read {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: red;
-    font-style: normal;
-    font-size: 1.2em;
-    margin: auto;
-    width: 100%;
-    height: 45px;
-    position: absolute;
-    text-align: center;
-    top: 0%;
-    left: 0%;
-    display: none;
-    line-height: normal;
-  }
-
-  .box {
-    height: 40px;
-    width: 300px;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    display: inline-block;
-  }
-
-  #welcome {
-    height: 200px;
-    width: 20px;
-    margin-right: 0;
-    padding-right: 0;
-    border-right: 0;
   }
 
   #welcome1 {
@@ -1455,60 +1318,7 @@ input {
     width: 100%;
     position: absolute;
     text-align: center;
-    top: 27%;
+    top: 24%;
     left: 0%;
-  }
-
-  .button {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-style: normal;
-    font-size: 1.7em;
-    margin: auto;
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    text-align: center;
-    top: 89%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(21, 163, 255);
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 30px;
-  }
-
-  #testoAlert {
-    height: 370px;
-    width: 300px;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    display: inline-block;
-    line-height: normal;
-  }
-
-  #home {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-style: normal;
-    font-size: 1em;
-    font-weight: 600;
-    margin: auto;
-    width: 100px;
-    height: 30px;
-    position: absolute;
-    text-align: center;
-    top: 92%;
-    left: 32%;
-    border: none;
-    background-color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 30px;
   }
 }
