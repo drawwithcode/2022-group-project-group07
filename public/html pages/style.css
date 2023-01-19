@@ -576,7 +576,7 @@ input {
 
 /* white popup */
 #popup {
-  height: 28vh;
+  height: 26vh;
   width: 55vw;
   background-color: white;
   top: 58%;
@@ -590,7 +590,7 @@ input {
 }
 
 #alert {
-  width: 7vh;
+  width: 6vh;
   height: auto;
   top: 3.25%;
   left: 38%;
