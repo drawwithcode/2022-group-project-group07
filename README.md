@@ -108,7 +108,6 @@ class Star {
 ```
 
 The main spiral is accompanied by a background sound, which resembles to a mermaid's song.
-
 Some browsers require an interaction with the webpage, such as a touch, in order to let the audio start. 
 
 ```javascript
