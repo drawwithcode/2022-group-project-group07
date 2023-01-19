@@ -496,7 +496,7 @@ mark {
   height: 45px;
   position: absolute;
   text-align: center;
-  top: 93%;
+  top: 92.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -546,7 +546,7 @@ mark {
 }
 
 #checkbox {
-  top: 86.6%;
+  top: 87%;
   left: 13%;
   display: inline;
   position: absolute;
@@ -576,7 +576,7 @@ input {
 
 /* white popup */
 #popup {
-  height: 30vh;
+  height: 28vh;
   width: 55vw;
   background-color: white;
   top: 58%;
