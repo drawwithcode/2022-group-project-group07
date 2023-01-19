@@ -518,9 +518,10 @@ mark {
   font-style: normal;
   font-size: 0.7em;
   margin: auto;
-  width: 22vw;
-  height: 3.5vh;
+  width: 80px;
+  height: 23px;
   position: absolute;
+  text-align: center;
   top: 93%;
   left: 16%;
   background-color: transparent;
@@ -539,17 +540,18 @@ mark {
   font-size: 0.7em;
   font-weight: 700;
   margin: auto;
-  width: 22vw;
-  height: 3.5vh;
+  width: 80px;
+  height: 23px;
   position: absolute;
   text-align: center;
   top: 93%;
   left: 51%;
   border: none;
+  background-color: white;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
   border-radius: 30px;
-  background-color: white;
 }
 
 input {
