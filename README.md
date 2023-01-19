@@ -10,6 +10,7 @@ Mermaid was developed as a part of the Creative Coding course at Politecnico di 
     * Aim
     * Concept
  2. ### [Structure and interaction](#structure-and-interaction)
+ 3. ### [Design](#Design)
  3. ### [Code](#code)
     * Visual aspects
     * Coding challenges
@@ -35,7 +36,7 @@ The name Mermaid comes from Greek mythology, where mermaids were bewitchers beca
 ![Interaction](readme/interaction.png)<br>
 
 The project is composed by: <br>
-1. **The representation on the projector:**  a p5.js sketch of a spiral made with the data that comes from every client that is going to connect to this project. Every client is associated with a color that is shown in the spiral. In this page there's also the "song of Mermaid", which consists of a melody and the sounds that Mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid; 
+1. **The representation on the projector:**  a p5.js sketch of a spiral made with the data that comes from every client that is going to connect to this project. Every client is associated with a color that is shown in the spiral. In this page there's also the "song of Mermaid", which consists of a melody and the sounds that Mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid (to make the experience more usable, the maximum number of users who can connect at the same time is set at 5); 
 
 2. **The mermaid interface:** when the user scans the QR code in his device will appear the first HTML page of Mermaid. A pop up with the Terms and Conditions will be shown, with two possible options:
 
@@ -48,6 +49,21 @@ The project is composed by: <br>
           * By clicking the "Go read" button the user will go to an HTML page similiar to the first Terms and Conditions page but with the part that describes the project and the aim of Mermaid highlighted.
 
       * **The user clicks "Agree"** - Mermaid starts to steal data. The user will be taken to a p5.js sketch where he'll see his camera captured and transformed in little circles, that represent every different data. After a while the camera representation is going to create a spiral, similiar to the big spiral on the projector. The spiral has a precise color, different from every user that is connected at the same time. Data are stolen and Mermaid has the control over them. After the user realizes that his data are going on the main screen, an "info" button will appear. If the user clicks it, he will be notified of the data theft, and he will be asked if he wants to go back and read properly what he agreed to. If he decides to go back, he will be taken to an HTML page similiar to the first Terms and Conditions page but with the part that describes the project and the aim of Mermaid highlighted.
+
+# **Design**
+Mermaid has a mysterious, mystical style that perfectly embodies the initial enigmatic nature of the project.
+For the logo of Mermaid, we chose a logotype made with the font Armouk Regular. This font is sinuous, soft and remember the waves of the sea.
+
+[SPAZIO PER LOGO E FONT ARMOUK] <br>
+
+For the other text of Mermaid, we chose the font Monterrat, a simple
+sans serif font with strong readability.
+
+[SPAZIO PER FONT MONTSERRAT] <br>
+
+Initially we wanted the colors of the spirals to be all shades of Mermaid's color; we later realized that this made it difficult to distinguish the different data in the main spiral, so we decided to choose very different colors so that the distinction would be sharp.
+
+[COLORI] 
 
 # **Code**
 
@@ -95,7 +111,7 @@ The main spiral is accompanied by a background sound, which resembles to a merma
 ```javascript
 // preload of background sound
 function preload() {
-  song = loadSound('./libraries/BlueWhale.mp3');
+  song = loadSound('./libraries/MermaidSong.mp3');
 }
 
 // setup the artboard

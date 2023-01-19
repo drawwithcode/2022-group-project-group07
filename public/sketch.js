@@ -31,7 +31,7 @@ clientSocket.on("endclient", removeClient);
 
 // preload of background sound
 function preload() {
-  song = loadSound("./assets/BlueWhale.mp3");
+  song = loadSound("./assets/MermaidSong.mp3");
   qr = loadImage("./assets/qrcode.jpg");
 }
 
