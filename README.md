@@ -108,6 +108,7 @@ class Star {
 ```
 
 The main spiral is accompanied by a background sound, which resembles to a mermaid's song.
+Some browsers require an interaction with the webpage, such as a touch, in order to let the audio start. 
 
 ```javascript
 // preload of background sound
@@ -407,8 +408,6 @@ function removeClient(termination_parameter) {
 
 
 5. `voice` - to tell the client master to execute the voice stream, associated to and created by the specific client.
-
-Some browsers require an interaction with the webpage, such as a touch, in order to let the audio start. 
 
 ```javascript
 // callback function for client disconnection and associated spiral remove
