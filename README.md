@@ -95,7 +95,7 @@ The main spiral is accompanied by a background sound, resembling a mermaids' son
 ```javascript
 // preload of background sound
 function preload() {
-  song = loadSound('./libraries/BlueWhale.mp3');
+  song = loadSound('./libraries/MermaidSong.mp3');
 }
 
 // setup the artboard
