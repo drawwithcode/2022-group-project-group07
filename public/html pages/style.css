@@ -271,8 +271,8 @@ body {
   font-style: normal;
   font-size: 1.5em;
   margin: auto;
-  width: 28vw;
-  height: 6vh;
+  width: 130px;
+  height: 40px;
   position: absolute;
   text-align: center;
   top: 89%;
@@ -426,7 +426,7 @@ body {
 
 /* big light blue square */
 #rect1 {
-  height: 70vh;
+  height: 67vh;
   width: 78vw;
   background-color: rgb(21, 163, 255);
   top: 59%;
@@ -441,7 +441,7 @@ body {
 
 /* white square inside the blue one */
 #rect2 {
-  height: 54vh;
+  height: 51vh;
   width: 69vw;
   background-color: white;
   top: 48%;
@@ -456,7 +456,7 @@ body {
 
 /* text of the TOS, inside the white square */
 #testolungo {
-  height: 56vh;
+  height: 50vh;
   width: 68vw;
   font-weight: 400;
   padding: 20px;
