@@ -403,15 +403,34 @@ function removeClient(termination_parameter) {
 5. `voice` - to tell the client master to execute the voice stream, associated to and created by the specific client.
 
 ```javascript
-// callback function for client disconnection and associated spiral remove
-clientSocket.on("endclient", removeClient);
+// The MediaDevices.getUserMedia() method 
+// prompts the user for permission to use a media input, in this case audio
+navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
 
-[...]
+  // If the user accepts, the promise is resolved with an audio stream that is passed into the MediaRecorder constructor
+  const mediaRecorder = new MediaRecorder(stream);
 
-// function for take trace of client disconnection
-function removeClient(termination_parameter) {
-  disconnected_client[termination_parameter.uid] = 1;
-}
+  mediaRecorder.start(); // start recording audio
+
+  // Collect chunks of audio data in an array as the recording continues
+  // listening for "dataavailable" event trigger
+  let audioChunks = [];
+
+  mediaRecorder.addEventListener("dataavailable", (event) => {
+    audioChunks.push(event.data);
+  });
+
+  setInterval(() => {
+    mediaRecorder.stop(); // stop recording audio every 1.5 seconds
+  }, 1500);
+
+  // When the audio recording stops, send a message to the server containing the array
+  mediaRecorder.addEventListener("stop", () => {
+    clientSocket.emit("audioMessage", audioChunks);
+    audioChunks = []; // empty the array
+    mediaRecorder.start(); // start recording again
+  });
+});
 ```
 *clientSpiral.js*
 
