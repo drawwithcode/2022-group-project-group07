@@ -494,35 +494,20 @@ mark {
   margin: auto;
   width: 100%;
   height: 45px;
-  position: relative;
-  text-align: center;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-}
-
-/* div which contains the checkbox and the writing "I agree to the Terms of Service" */
-#allineatipls {
-  margin: auto;
-  width: 65%;
-  height: 13px;
   position: absolute;
   text-align: center;
-  top: 89%;
+  top: 92%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: block;
 }
 
 #checkbox {
-  top: 0%;
-  left: 0%;
-  display: block;
-  position: relative;
-  height: 13px;
-  width: 13px;
-  transform: translate(-50%, -50%);
+  top: 87%;
+  left: 13%;
+  display: inline;
+  position: absolute;
+  height: 12px;
+  width: 12px;
 }
 
 /* button "disagree" on the left */
