@@ -36,7 +36,7 @@ The name Mermaid comes from Greek mythology, where mermaids were bewitchers beca
 ![Interaction](readme/interaction.png)<br>
 
 The project is composed by: <br>
-1. **The representation on the projector,** that is p5 sketch of a spiral made with the data that arrives from every client that is going to connect to this project. Everytime a new client arrives the color of the client is shown in the spiral. In this page there's also the "song of Mermaid" which consists of a base and the sounds that mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid; 
+1. **The representation on the projector,** that is p5 sketch of a spiral made with the data that arrives from every client that is going to connect to this project. Everytime a new client arrives the color of the client is shown in the spiral. In this page there's also the "song of Mermaid" which consists of a base and the sounds that mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid (to make the experience more usable, the maximum number of users who can connect at the same time is set at 5); 
 
 2. **The mermaid interface:** when the user scans the QR code in his device will appear the first HTML page of Mermaid. A pop up with the Terms and Conditions will appear, and then we have two possible options:
 
@@ -54,7 +54,17 @@ The project is composed by: <br>
 Mermaid has a mysterious, mystical style that perfectly embodies the initial enigmatic nature of the project.
 For the logo of Mermaid, we chose a logotype made with the font Armouk Regular. This font is sinuous, soft and remember the waves of the sea.
 
+[SPAZIO PER LOGO E FONT ARMOUK] <br>
+
 For the other text of Mermaid, we chose the font Monterrat, a simple
+sans serif font with strong readability.
+
+[SPAZIO PER FONT MONTSERRAT] <br>
+
+Initially we wanted the colors of the spirals to be all shades of Mermaid's color; we later realized that this made it difficult to distinguish the different data in the main spiral, so we decided to choose very different colors so that the distinction would be sharp.
+
+[COLORI] 
+
 # **Code**
 
 ## **Visual aspect**
