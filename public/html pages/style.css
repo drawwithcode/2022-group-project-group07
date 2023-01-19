@@ -426,7 +426,7 @@ body {
 
 /* big light blue square */
 #rect1 {
-  height: 67vh;
+  height: 63vh;
   width: 78vw;
   background-color: rgb(21, 163, 255);
   top: 59%;
@@ -441,7 +441,7 @@ body {
 
 /* white square inside the blue one */
 #rect2 {
-  height: 51vh;
+  height: 48vh;
   width: 69vw;
   background-color: white;
   top: 48%;
@@ -456,7 +456,7 @@ body {
 
 /* text of the TOS, inside the white square */
 #testolungo {
-  height: 50vh;
+  height: 47vh;
   width: 68vw;
   font-weight: 400;
   padding: 20px;
