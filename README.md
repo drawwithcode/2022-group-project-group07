@@ -333,6 +333,8 @@ newSocket.on("client", incomingNewClient);
 // function called to send the information (the associated color and a random value for spiral creation) of the new client to the master
 function incomingNewClient(dataReceived) {
     io.to(users[0]).emit("newclient", dataReceived);
+       console.log("Color : ", dataReceived.color);
+  }
 ```
 *server.js*
 
