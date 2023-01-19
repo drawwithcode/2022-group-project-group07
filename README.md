@@ -21,34 +21,34 @@ Mermaid was developed as a part of the Creative Coding course at Politecnico di 
 
 ## **Theme**
 
-The project is inspired by the theme of *presence*. In a world in which technology used in design products is rendered invisible and intangible, the challenge was to be able to highlight invisible steps that we fail to notice in our daily interaction with the world of technology. 
+The project is inspired by the theme of *presence*. In a world in which technology is rendered invisible and intangible, the challenge was to be able to highlight invisible steps that we fail to notice in our daily interaction with it. 
 
 ## **Aim**
 
-We have interpreted this concept of making visible what we cannot grasp with passive acceptance of the **Terms and Conditions of use** required to access any kind of online service. Most people do not read what they agree to in order to use the applications. Our goal with Mermaid is to make users think about the personal information they make available on the Internet every day. Mermaid wants to make visible to the user their inability to control their personal data by agreeing to sell it to the services they use.
+We have interpreted this concept of making visible what we cannot grasp with passive acceptance of the **Terms and Conditions of use** required to access any kind of online service. Most people do not read what they agree to in order to use the applications. Our goal with Mermaid is to make users think about the personal information they upload on the Internet every day. Mermaid wants to highlight the inability of the users to control their personal data by agreeing to share them with third parties.
 
 ## **Concept**
 
-The name Mermaid comes from Greek mythology, where mermaids were bewitchers because of their good looks and song, but at the same time they were false because their goal was to lure visitors and then kill them. We transposed this concept to our project, where online services represent mermaids. The users can interact with Mermaid, and to do that they have to accept the Terms and Conditions of Mermaid. In this Terms and Conditions the users will be notified that their data is about to be stolen and will no longer be under their control; after you accept this terms, your camera and microphone data are going to be stolen by Mermaid, and they'll be represented in the projector representation. 
+The name Mermaid comes from Greek mythology, where mermaids were bewitchers because of their good looks and voices, but at the same time they were also misleading because their goal was to lure visitors and then kill them. We transposed this concept to our project, where online services represent mermaids. The users can interact with Mermaid only after having accepted its Terms and Conditions. In this Terms and Conditions the users will be notified that their data is about to be stolen and will no longer be under their control. After having accepted this terms, users' camera and microphone data are going to be used by Mermaid, showing them in the projector representation. 
 
 # **Structure and interaction**
 
 ![Interaction](readme/interaction.png)<br>
 
 The project is composed by: <br>
-1. **The representation on the projector,** that is p5 sketch of a spiral made with the data that arrives from every client that is going to connect to this project. Everytime a new client arrives the color of the client is shown in the spiral. In this page there's also the "song of Mermaid" which consists of a base and the sounds that mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid (to make the experience more usable, the maximum number of users who can connect at the same time is set at 5); 
+1. **The representation on the projector:**  a p5.js sketch of a spiral made with the data that comes from every client that is going to connect to this project. Every client is associated with a color that is shown in the spiral. In this page there's also the "song of Mermaid", which consists of a melody and the sounds that Mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid (to make the experience more usable, the maximum number of users who can connect at the same time is set at 5); 
 
-2. **The mermaid interface:** when the user scans the QR code in his device will appear the first HTML page of Mermaid. A pop up with the Terms and Conditions will appear, and then we have two possible options:
+2. **The mermaid interface:** when the user scans the QR code in his device will appear the first HTML page of Mermaid. A pop up with the Terms and Conditions will be shown, with two possible options:
 
-      * **The user clicks "Disagree"** - another pop up asking "are you sure you don't want to be a part of the Mermaid's community?" will appear. 
+      * **The user clicks "Disagree"** - another pop up asking "Are you sure you don't want to be a part of the Mermaid's community?" will appear. 
 
-         * If the user clicks "no", the pop up will close and the sketch will return to the Terms and Conditions pop up; 
+         * If the user clicks "No", the pop up will be closed and the sketch will return to the Terms and Conditions webpage; 
 
-         * if the user clicks "yes" he will be taken to a congratulation HTML page, where the data theft that Mermaid allegedly committed against him is made explicit and he is asked if he would like to go and reread what the Terms and Conditions said.
+         * if the user clicks "Yes" he will be redirected to a new HTML page, where the data theft that Mermaid allegedly tried to commit against him is made explicit and he is asked if he would like to go on and read again what the Terms and Conditions said.
 
-             * By clicking the "Go read" button the user will go to an HTML page similiar to the first Terms and Conditions page but with the part that describes the project and the aim of Mermaid highlighted.
+          * By clicking the "Go read" button the user will go to an HTML page similiar to the first Terms and Conditions page but with the part that describes the project and the aim of Mermaid highlighted.
 
-      * **The user clicks "Agree"** - Mermaid starts to steal data. The user will be taken to a p5 sketch where he'll see his camera captured and transformed in little circles, that represent every different data. After a while the camera representation is going to create a spiral, similiar to the big spiral on the projector. The spiral has a precise color, different from every user that is connected at the same time:  the data are like sucked up by the spiral and come to the big spiral on the projector. Data are stolen and Mermaid has the control over them. After the user realizes that his data is going on the main screen, a "info" button will appear. If the user clicks it, he will be notified of the data theft, and asked if he wants to go back and read properly what he agreed to. If he decides to go back, he will be taken to the page where the terms and conditions of use have the part where Mermaid makes its purposes explicit highlighted.
+      * **The user clicks "Agree"** - Mermaid starts to steal data. The user will be taken to a p5.js sketch where he'll see his camera captured and transformed in little circles, that represent every different data. After a while the camera representation is going to create a spiral, similiar to the big spiral on the projector. The spiral has a precise color, different from every user that is connected at the same time. Data are stolen and Mermaid has the control over them. After the user realizes that his data are going on the main screen, an "info" button will appear. If the user clicks it, he will be notified of the data theft, and he will be asked if he wants to go back and read properly what he agreed to. If he decides to go back, he will be taken to an HTML page similiar to the first Terms and Conditions page but with the part that describes the project and the aim of Mermaid highlighted.
 
 # **Design**
 Mermaid has a mysterious, mystical style that perfectly embodies the initial enigmatic nature of the project.
@@ -72,7 +72,7 @@ MAIN SPIRAL
 
 ![Main](readme/mermaid_main_spiral.gif)<br>
 
-The main spiral was created through generative art. To create each spiral we used a class called `Star`. The class contains parameters that allow a subsequent algorithm to rotate the circles forming the spiral. The `update` function allows for continuous rotation.
+The main spiral was created through generative art. To create each spiral we used a class called `Star`. The class contains parameters that allow a subsequent algorithm to rotate the circles forming the spiral. The `update` function allows a continuous rotation.
 
 ```javascript
 // Star (spiral) class definition
@@ -106,7 +106,7 @@ class Star {
 }
 ```
 
-The main spiral is accompanied by a background sound, resembling a mermaids' song.
+The main spiral is accompanied by a background sound, which resembles to a mermaid's song.
 
 ```javascript
 // preload of background sound
@@ -119,8 +119,8 @@ function setup() {
 
  [...]
 
-  song.play(); // starts playing
-  song.loop(); // play again when done
+  song.play(); // start playing
+  song.loop(); // loop the audio
   userStartAudio(); // enable audio
   song.setVolume(0.5); // change the volume of the sound file
 }
@@ -129,7 +129,7 @@ USER'S SPIRAL
 
 ![Client](readme/mermaid_client_spiral.gif)<br>
 
-The user's spiral was created through generative art. To obtain every circle, we used a function called `pointCalculator` that is launched for every point through two `loop`. `pointCalculator` takes the video's pixel and calculates the x and y of every corrispondent circle. The radius of the circle depends on the distance of the user from the camera. 
+To obtain every circle of this spiral, we used a function called `pointCalculator` that is launched for every point through two `loop`. `pointCalculator` takes the video's pixel and calculates the x and y of every corrispondent circle. The radius of the circle depends on the distance of the user from the camera. 
 
 ```javascript
 function draw() {
@@ -146,7 +146,7 @@ function draw() {
 
    [...]
 
-   //function that calculates the circles that simulate camera
+   //function that calculates the circles that simulate the camera
 function pointCalculator(x, y) {
   index = (video.width - x - 1 + y * video.width) * 4;
   r = video.pixels[index + 0];
@@ -159,7 +159,7 @@ function pointCalculator(x, y) {
   return w, circleX, circleY;
 }
 ```
-Beside the static image, the user's spiral is made of 3 different images representation that rotates at different speeds. The rotations start at different `frameCount`, to allow differentiation of flows and to see particles continuously depart from the static image.
+Beside the static image, the user's spiral is made of 3 different representations that rotates at different speeds. The rotations start at different `frameCount`, to allow a distinction of flows and to see particles continuously depart from the static image.
 
 ```javascript
 //third moving image
@@ -170,7 +170,7 @@ Beside the static image, the user's spiral is made of 3 different images represe
         circle(circleX, circleY, w);
       }
 
-      //start rotation3
+      //start rotation three
       if (frameCount > 900) {
         rotationGradient3 -= 0.00001 + rotationValue;
         rotationValue += 0.00000001;
@@ -185,7 +185,7 @@ Beside the static image, the user's spiral is made of 3 different images represe
         circle(circleX, circleY, w);
       }
 
-      //start rotation2
+      //start rotation two
       if (frameCount > 600) {
         rotationGradient2 -= 0.00001;
       }
@@ -199,7 +199,7 @@ Beside the static image, the user's spiral is made of 3 different images represe
         circle(circleX, circleY, w);
       }
 
-      //start rotation1
+      //start rotation one
       if (frameCount > 300) {
         rotationGradient -= 0.00001;
       }
@@ -211,11 +211,11 @@ Beside the static image, the user's spiral is made of 3 different images represe
 
 SERVER-CLIENT COMMUNICATION
 
-One of the most complex parts we had to deal with was the client-server communication we needed to implement our interactive digital exhibition.
+One of the most complex part we had to deal with was the client-server communication we needed to implement our interactive digital exhibition.
 
 ![Server](readme/server_client.png)<br>
 
-For the realisation of the server, a java script (*server.js*) was created and executed by the framework called *node.js*.
+For the realisation of the server, a JavaScript (*server.js*) was created and executed by the framework called *node.js*.
 
 Data is sent between the master client and the other clients via an events driven server, using sockets as the communication channel.
 
@@ -239,7 +239,7 @@ function newServerConnection(newSocket) {
   total_connections = total_connections +1;
   
   for (i=0 ; i<6; i++ ){   // push the user socket id value in users array
-    if (users[i] == 0){    // if the users array value is set to 0 is a new connection
+    if (users[i] == 0){    // if the users array value is set to 0 there is a new connection
       users[i] = newSocket.id;
       number_connection = number_connection +1;
       let userinfo = {   
@@ -406,6 +406,8 @@ function removeClient(termination_parameter) {
 
 
 5. `voice` - to tell the client master to execute the voice stream, associated to and created by the specific client.
+
+Some browsers require an interaction with the webpage, such as a touch, in order to let the audio start. 
 
 ```javascript
 // callback function for client disconnection and associated spiral remove
