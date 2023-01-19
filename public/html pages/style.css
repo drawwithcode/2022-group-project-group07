@@ -419,7 +419,7 @@ body {
   height: 9vh;
   position: absolute;
   text-align: center;
-  top: 9%;
+  top: 11%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -493,12 +493,13 @@ mark {
   font-size: 8pt;
   margin: auto;
   width: 100%;
-  height: 7vh;
+  height: 45px;
   position: absolute;
   text-align: center;
   top: 93%;
   left: 50%;
   transform: translate(-50%, -50%);
+
 }
 
 /* button "disagree" on the left */
@@ -549,8 +550,8 @@ mark {
   left: 13%;
   display: inline;
   position: absolute;
-  height: 12px;
-  width: 12px;
+  height: 13px;
+  width: 13px;
 }
 
 input {
