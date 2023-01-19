@@ -55,12 +55,12 @@ The project is composed by: <br>
 Mermaid has a mysterious, mystical style that perfectly embodies the initial enigmatic nature of the project.
 For the logo of Mermaid, we chose a logotype made with the font Armouk Regular. This font is sinuous, soft and remembers the waves of the sea.
 
-[SPAZIO PER LOGO E FONT ARMOUK] <br>
+![Armouk](readme/armouk_font.png)<br>
 
 For the other texts of Mermaid, we chose the font Montserrat, a simple
 sans serif font with strong readability.
 
-[SPAZIO PER FONT MONTSERRAT] <br>
+![Montserrat](readme/montserrat_font.png)<br>
 
 First of all, we wanted the colors of the spirals to be all shades of Mermaid's color; we later realized that this made it difficult to distinguish the different data in the main spiral, so we decided to choose very different colors so that the distinction would be sharp.
 
