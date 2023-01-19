@@ -25,43 +25,44 @@ The project is inspired by the theme of *presence*. In a world in which technolo
 
 ## **Aim**
 
-We have interpreted this concept of making visible what we cannot grasp with passive acceptance of the **Terms and Conditions of use** required to access any kind of online service. Most people do not read what they agree to in order to use the applications. Our goal with Mermaid is to make users think about the personal information they upload on the Internet every day. Mermaid wants to highlight the inability of the users to control their personal data by agreeing to share them with third parties.
+We have interpreted this concept of making visible what we cannot grasp with passive acceptance of the **Terms and Conditions of use** required to access any kind of online service. Most people do not read what they agreed to use the applications. Our goal with Mermaid is to make users think about the personal information they upload on the Internet every day. Mermaid wants to highlight the inability of the users to control their personal data by agreeing to share them with third parties.
 
 ## **Concept**
 
-The name Mermaid comes from Greek mythology, where mermaids were bewitchers because of their good looks and voices, but at the same time they were also misleading because their goal was to lure visitors and then kill them. We transposed this concept to our project, where online services represent mermaids. The users can interact with Mermaid only after having accepted its Terms and Conditions. In this Terms and Conditions the users will be notified that their data is about to be stolen and will no longer be under their control. After having accepted this terms, users' camera and microphone data are going to be used by Mermaid, showing them in the projector representation. 
+The name Mermaid comes from Greek mythology, where mermaids were bewitchers because of their good looks and voices, but at the same time they were also misleading because their goal was to lure visitors and then kill them. We transposed this concept to our project, where online services represent mermaids. The users can interact with Mermaid only after having accepted its Terms and Conditions. In this Terms and Conditions, the users will be notified that their data is about to be stolen and will no longer be under their control. After having accepted this terms, users' camera and microphone data are going to be used by Mermaid, showing them in the projector representation. 
 
 # **Structure and interaction**
 
 ![Interaction](readme/interaction.png)<br>
 
 The project is composed by: <br>
+
 1. **The representation on the projector:**  a p5.js sketch of a spiral made with the data that comes from every client that is going to connect to this project. Every client is associated with a color that is shown in the spiral. In this page there's also the "song of Mermaid", which consists of a melody and the sounds that Mermaid "steals" from users' microphones. In this representation on the projector there is a QR code which allows users to interact with Mermaid (to make the experience more usable, the maximum number of users who can connect at the same time is set at 5); 
 
 2. **The mermaid interface:** when the user scans the QR code in his device will appear the first HTML page of Mermaid. A pop up with the Terms and Conditions will be shown, with two possible options:
 
       * **The user clicks "Disagree"** - another pop up asking "Are you sure you don't want to be a part of the Mermaid's community?" will appear. 
 
-         * If the user clicks "No", the pop up will be closed and the sketch will return to the Terms and Conditions webpage; 
+         * If the user clicks "No", the pop up will be closed and the sketch will return to the Terms and Conditions webpage.
 
          * if the user clicks "Yes" he will be redirected to a new HTML page, where the data theft that Mermaid allegedly tried to commit against him is made explicit and he is asked if he would like to go on and read again what the Terms and Conditions said.
 
-          * By clicking the "Go read" button the user will go to an HTML page similiar to the first Terms and Conditions page but with the part that describes the project and the aim of Mermaid highlighted.
+          * By clicking the "Go read" button the user will go to an HTML page similar to the first Terms and Conditions page but with the part that describes the project and the aim of Mermaid highlighted.
 
-      * **The user clicks "Agree"** - Mermaid starts to steal data. The user will be taken to a p5.js sketch where he'll see his camera captured and transformed in little circles, that represent every different data. After a while the camera representation is going to create a spiral, similiar to the big spiral on the projector. The spiral has a precise color, different from every user that is connected at the same time. Data are stolen and Mermaid has the control over them. After the user realizes that his data are going on the main screen, an "info" button will appear. If the user clicks it, he will be notified of the data theft, and he will be asked if he wants to go back and read properly what he agreed to. If he decides to go back, he will be taken to an HTML page similiar to the first Terms and Conditions page but with the part that describes the project and the aim of Mermaid highlighted.
+      * **The user clicks "Agree"** - Mermaid starts to steal data. The user will be taken to a p5.js sketch where he'll see his camera captured and transformed in little circles, that represent every different data. After a while the camera representation is going to create a spiral, similar to the big spiral on the projector. The spiral has a precise color, different from every user that is connected at the same time. Data are stolen and Mermaid has the control over them. After the user realizes that his data are going on the main screen, an "info" button will appear. If the user clicks it, he will be notified of the data theft, and he will be asked if he wants to go back and read properly what he agreed to. If he decides to go back, he will be taken to an HTML page similar to the first Terms and Conditions page but with the part that describes the project and the aim of Mermaid highlighted.
 
 # **Design**
 Mermaid has a mysterious, mystical style that perfectly embodies the initial enigmatic nature of the project.
-For the logo of Mermaid, we chose a logotype made with the font Armouk Regular. This font is sinuous, soft and remember the waves of the sea.
+For the logo of Mermaid, we chose a logotype made with the font Armouk Regular. This font is sinuous, soft and remembers the waves of the sea.
 
 [SPAZIO PER LOGO E FONT ARMOUK] <br>
 
-For the other text of Mermaid, we chose the font Monterrat, a simple
+For the other texts of Mermaid, we chose the font Montserrat, a simple
 sans serif font with strong readability.
 
 [SPAZIO PER FONT MONTSERRAT] <br>
 
-Initially we wanted the colors of the spirals to be all shades of Mermaid's color; we later realized that this made it difficult to distinguish the different data in the main spiral, so we decided to choose very different colors so that the distinction would be sharp.
+First of all, we wanted the colors of the spirals to be all shades of Mermaid's color; we later realized that this made it difficult to distinguish the different data in the main spiral, so we decided to choose very different colors so that the distinction would be sharp.
 
 ![Colors](readme/colors.png)<br>
 
@@ -211,13 +212,13 @@ Beside the static image, the user's spiral is made of 3 different representation
 
 SERVER-CLIENT COMMUNICATION
 
-One of the most complex part we had to deal with was the client-server communication we needed to implement our interactive digital exhibition.
+One of the most complex parts we had to deal with was the client-server communication we needed to implement our interactive digital exhibition.
 
 ![Server](readme/server_client.png)<br>
 
-For the realisation of the server, a JavaScript (*server.js*) was created and executed by the framework called *node.js*.
+For the realization of the server, a JavaScript (*server.js*) was created and executed by the framework called *node.js*.
 
-Data is sent between the master client and the other clients via an events driven server, using sockets as the communication channel.
+Data is sent between the master client and the other clients via an event driven server, using sockets as the communication channel.
 
 The master client displays the main spiral and receives data from the other clients in the form of further spirals.
 
