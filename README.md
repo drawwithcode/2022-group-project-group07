@@ -63,7 +63,7 @@ sans serif font with strong readability.
 
 Initially we wanted the colors of the spirals to be all shades of Mermaid's color; we later realized that this made it difficult to distinguish the different data in the main spiral, so we decided to choose very different colors so that the distinction would be sharp.
 
-[COLORI] 
+![Colors](readme/colors.png)<br>
 
 # **Code**
 
