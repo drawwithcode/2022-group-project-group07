@@ -10,6 +10,7 @@ Mermaid was developed as a part of the Creative Coding course at Politecnico di 
     * Aim
     * Concept
  2. ### [Structure and interaction](#structure-and-interaction)
+ 3. ### [Design](#Design)
  3. ### [Code](#code)
     * Visual aspects
     * Coding challenges
@@ -49,6 +50,11 @@ The project is composed by: <br>
 
       * **The user clicks "Agree"** - Mermaid starts to steal data. The user will be taken to a p5 sketch where he'll see his camera captured and transformed in little circles, that represent every different data. After a while the camera representation is going to create a spiral, similiar to the big spiral on the projector. The spiral has a precise color, different from every user that is connected at the same time:  the data are like sucked up by the spiral and come to the big spiral on the projector. Data are stolen and Mermaid has the control over them. After the user realizes that his data is going on the main screen, a "info" button will appear. If the user clicks it, he will be notified of the data theft, and asked if he wants to go back and read properly what he agreed to. If he decides to go back, he will be taken to the page where the terms and conditions of use have the part where Mermaid makes its purposes explicit highlighted.
 
+# **Design**
+Mermaid has a mysterious, mystical style that perfectly embodies the initial enigmatic nature of the project.
+For the logo of Mermaid, we chose a logotype made with the font Armouk Regular. This font is sinuous, soft and remember the waves of the sea.
+
+For the other text of Mermaid, we chose the font Monterrat, a simple
 # **Code**
 
 ## **Visual aspect**
