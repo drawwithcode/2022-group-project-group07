@@ -1278,13 +1278,13 @@ input {
     height: 45px;
     position: absolute;
     text-align: center;
-    top: 6%;
+    top: 6.5%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   #checkbox {
-    top: 88.7%;
+    top: 89.7%;
     left: 13%;
     display: inline;
     position: absolute;
@@ -1303,7 +1303,7 @@ input {
     height: 45px;
     position: absolute;
     text-align: center;
-    top: 93.9%;
+    top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
