@@ -325,23 +325,14 @@ function receiveUserId(userdata) {
 3. `client` - to notify the Master Client of the connection of a new client and its color.
 
 ```javascript
-// define the function that will be called when the server will send the data (color and random value of the associated spiral) to the client
-clientSocket.on("sendUserId", receiveUserId);
+// define the function to be called when new client whant to send a message to the master-client
+newSocket.on("client", incomingNewClient);
 
-function receiveUserId(userdata) {
-  colornum = userdata.usernum;
-  if (userdata.usernum < 6) {
-    let connection_parameter = {
-      id: clientSocket.id,
-      random_flag: myrandom_flag,
-      color: colornum,
-    };
-    valid_usernum = 1;
-    clientSocket.emit("client", connection_parameter); // send the client event to comunicate the data
-  } else {
-    colornum = 999;  // if the connection is exceeded set the colornum to 999 in order to show the message in the draw function
-  }
-}
+[...]
+
+// function called to send the information (the associated color and a random value for spiral creation) of the new client to the master
+function incomingNewClient(dataReceived) {
+    io.to(users[0]).emit("newclient", dataReceived);
 ```
 *server.js*
 
