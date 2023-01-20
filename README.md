@@ -25,7 +25,7 @@ The project is inspired by the theme of *presence*. In a world in which technolo
 
 ## **Aim**
 
-We have interpreted this concept of making visible what we cannot grasp with passive acceptance of the **Terms and Conditions of use** required to access any kind of online service. Most people do not read what they agreed to use the applications. Our goal with Mermaid is to make users think about the personal information they upload on the Internet every day. Mermaid wants to highlight the inability of the users to control their personal data by agreeing to share them with third parts.
+We have interpreted this concept of making visible what we cannot grasp with passive acceptance of the **Terms and Conditions of use** required to access any kind of online service. Most people do not read what they agreed to use the applications. Our goal with Mermaid is to make users think about the personal information they upload on the Internet every day. Mermaid wants to highlight the inability of the users to control their personal data by agreeing to share them with third parties.
 
 ## **Concept**
 
